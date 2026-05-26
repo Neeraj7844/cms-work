@@ -20,27 +20,12 @@ const FeatureSection = () => {
 
     });
 
-
-
-
-
-
-
-
   // FETCH DATA
   useEffect(() => {
 
     fetchFeatureData();
 
   }, []);
-
-
-
-
-
-
-
-
 
   const fetchFeatureData =
     async () => {
@@ -50,20 +35,14 @@ const FeatureSection = () => {
         const res =
           await axios.get(
 
-            "http://localhost:5000/api/feature"
+            "https://cms-3tty.onrender.com/api/feature"
 
           );
-
-
-
 
         console.log(
           "FEATURE DATA:",
           res.data
         );
-
-
-
 
         if (res.data) {
 
@@ -72,12 +51,8 @@ const FeatureSection = () => {
             heading:
               res.data.heading || "",
 
-
-
             description:
               res.data.description || "",
-
-
 
             cards:
               res.data.cards || [],
@@ -97,37 +72,14 @@ const FeatureSection = () => {
 
   };
 
-
-
-
-
-
-
-
-
-
-
-
-
   return (
 
     <section className="feature-section">
-
-
-
 
       {/* TAG */}
       <div className="feature-tag">
         Feature
       </div>
-
-
-
-
-
-
-
-
 
       {/* HEADING */}
       <h2>
@@ -142,15 +94,6 @@ const FeatureSection = () => {
 
       </h2>
 
-
-
-
-
-
-
-
-
-
       {/* DESCRIPTION */}
       <p className="feature-desc">
 
@@ -164,22 +107,8 @@ const FeatureSection = () => {
 
       </p>
 
-
-
-
-
-
-
-
-
-
-
-
       {/* CARDS */}
       <div className="feature-cards">
-
-
-
 
         {
 
@@ -187,9 +116,6 @@ const FeatureSection = () => {
           featureData.cards.length > 0
 
           ? (
-
-
-
 
             featureData.cards.map(
 
@@ -202,9 +128,6 @@ const FeatureSection = () => {
                   className="feature-card"
                   key={index}
                 >
-
-
-
 
                   {/* IMAGE */}
                   {
@@ -231,14 +154,6 @@ const FeatureSection = () => {
 
                   }
 
-
-
-
-
-
-
-
-
                   {/* ICON */}
                   <div className="icon-box">
 
@@ -252,16 +167,6 @@ const FeatureSection = () => {
 
                   </div>
 
-
-
-
-
-
-
-
-
-
-
                   {/* TITLE */}
                   <h3
 
@@ -270,12 +175,8 @@ const FeatureSection = () => {
                       fontSize:
                         `${card.titleSize || 32}px`,
 
-
-
                       fontWeight:
                         card.titleWeight || 700,
-
-
 
                       color:
                         card.titleColor || "#5c7754",
@@ -294,18 +195,6 @@ const FeatureSection = () => {
 
                   </h3>
 
-
-
-
-
-
-
-
-
-
-
-
-
                   {/* TEXT */}
                   <p
 
@@ -314,12 +203,8 @@ const FeatureSection = () => {
                       fontSize:
                         `${card.textSize || 18}px`,
 
-
-
                       fontWeight:
                         card.textWeight || 400,
-
-
 
                       color:
                         card.textColor || "#222",
@@ -345,16 +230,7 @@ const FeatureSection = () => {
             )
 
           )
-
-
-
-
-
           : (
-
-
-
-
             <h2>
               No Cards Added
             </h2>

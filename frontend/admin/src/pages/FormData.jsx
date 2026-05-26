@@ -6,9 +6,6 @@ const FormData = () => {
 
   const [forms, setForms] = useState([]);
 
-
-
-
   // FETCH DATA
 
   const fetchForms = async () => {
@@ -16,7 +13,7 @@ const FormData = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/form/all"
+        "https://cms-3tty.onrender.com/api/form/all"
       );
 
       setForms(res.data.forms);
@@ -28,17 +25,11 @@ const FormData = () => {
     }
   };
 
-
-
-
   useEffect(() => {
 
     fetchForms();
 
   }, []);
-
-
-
 
   return (
 
@@ -51,8 +42,6 @@ const FormData = () => {
       <h1>
         Contact Messages
       </h1>
-
-
 
       <table
         border="1"
@@ -81,8 +70,6 @@ const FormData = () => {
           </tr>
 
         </thead>
-
-
 
         <tbody>
 

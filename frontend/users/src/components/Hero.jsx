@@ -18,20 +18,12 @@ const Hero = () => {
 
     });
 
-
-
-
-
   // FETCH HERO
   useEffect(() => {
 
     fetchHeroData();
 
   }, []);
-
-
-
-
 
   const fetchHeroData =
     async () => {
@@ -41,12 +33,9 @@ const Hero = () => {
         const res =
           await axios.get(
 
-            "http://localhost:5000/api/hero"
+            "https://cms-3tty.onrender.com/api/hero"
 
           );
-
-
-
 
         if (res.data) {
 
@@ -63,12 +52,6 @@ const Hero = () => {
       }
 
   };
-
-
-
-
-
-
 
   return (
 
@@ -87,19 +70,10 @@ const Hero = () => {
 
       </div>
 
-
-
-
-
-
-
       <div className="hero-container">
 
         {/* LEFT CONTENT */}
         <div className="hero-left">
-
-
-
 
           {/* HEADING */}
           <h1
@@ -109,12 +83,8 @@ const Hero = () => {
               fontSize:
                 `${heroData.headingSize}px`,
 
-
-
               fontWeight:
                 heroData.headingWeight,
-
-
 
               color:
                 heroData.headingColor,
@@ -133,12 +103,6 @@ const Hero = () => {
 
           </h1>
 
-
-
-
-
-
-
           {/* PARAGRAPH */}
           <p
 
@@ -147,12 +111,8 @@ const Hero = () => {
               fontSize:
                 `${heroData.paragraphSize}px`,
 
-
-
               fontWeight:
                 heroData.paragraphWeight,
-
-
 
               color:
                 heroData.paragraphColor,
@@ -171,24 +131,11 @@ const Hero = () => {
 
           </p>
 
-
-
-
-
-
-
           <button className="hero-btn">
             Get Started
           </button>
 
         </div>
-
-
-
-
-
-
-
 
         {/* RIGHT IMAGE */}
         <div className="hero-right">
@@ -198,10 +145,6 @@ const Hero = () => {
             {/* IMAGE */}
 
           </div>
-
-
-
-
 
           <div className="mail-box">
             ✉️

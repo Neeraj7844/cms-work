@@ -5,6 +5,7 @@ import React, {
 
 import axios from "axios";
 import "../styles/features.css";
+
 const AdminFeature = () => {
 
   // MAIN
@@ -13,8 +14,6 @@ const AdminFeature = () => {
 
   const [description, setDescription] =
     useState("");
-
-
 
   // MAIN STYLE
   const [headingSize, setHeadingSize] =
@@ -26,8 +25,6 @@ const AdminFeature = () => {
   const [headingColor, setHeadingColor] =
     useState("#5c7754");
 
-
-
   const [descriptionSize, setDescriptionSize] =
     useState("20");
 
@@ -36,8 +33,6 @@ const AdminFeature = () => {
 
   const [descriptionColor, setDescriptionColor] =
     useState("#222222");
-
-
 
   // CARDS
   const [cards, setCards] =
@@ -50,7 +45,6 @@ const AdminFeature = () => {
 
   }, []);
 
-
   const fetchFeature =
     async () => {
 
@@ -58,10 +52,8 @@ const AdminFeature = () => {
 
         const res =
           await axios.get(
-            "http://localhost:5000/api/feature"
+            "https://cms-3tty.onrender.com/api/feature"
           );
-
-
 
         if (res.data) {
 
@@ -69,49 +61,33 @@ const AdminFeature = () => {
             res.data.heading || ""
           );
 
-
-
           setDescription(
             res.data.description || ""
           );
-
-
 
           setHeadingSize(
             res.data.headingSize || "60"
           );
 
-
-
           setHeadingWeight(
             res.data.headingWeight || "700"
           );
-
-
 
           setHeadingColor(
             res.data.headingColor || "#5c7754"
           );
 
-
-
           setDescriptionSize(
             res.data.descriptionSize || "20"
           );
-
-
 
           setDescriptionWeight(
             res.data.descriptionWeight || "400"
           );
 
-
-
           setDescriptionColor(
             res.data.descriptionColor || "#222222"
           );
-
-
 
           setCards(
             res.data.cards || []
@@ -144,15 +120,11 @@ const AdminFeature = () => {
 
         text: "",
 
-
-
         titleSize: "32",
 
         titleWeight: "700",
 
         titleColor: "#5c7754",
-
-
 
         textSize: "18",
 
@@ -165,6 +137,7 @@ const AdminFeature = () => {
     ]);
 
   };
+
   // REMOVE CARD
   const removeCard =
     (index) => {
@@ -172,20 +145,17 @@ const AdminFeature = () => {
       const updatedCards =
         [...cards];
 
-
-
       updatedCards.splice(
         index,
         1
       );
-
-
 
       setCards(
         updatedCards
       );
 
   };
+
   // CARD CHANGE
   const handleCardChange =
     (
@@ -197,18 +167,15 @@ const AdminFeature = () => {
       const updatedCards =
         [...cards];
 
-
-
       updatedCards[index][field] =
         value;
-
-
 
       setCards(
         updatedCards
       );
 
   };
+
   // UPDATE
   const handleUpdate =
     async () => {
@@ -217,34 +184,26 @@ const AdminFeature = () => {
 
         await axios.put(
 
-          "http://localhost:5000/api/feature",
+          "https://cms-3tty.onrender.com/api/feature",
 
           {
 
             heading,
             description,
 
-
-
             headingSize,
             headingWeight,
             headingColor,
 
-
-
             descriptionSize,
             descriptionWeight,
             descriptionColor,
-
-
 
             cards,
 
           }
 
         );
-
-
 
         alert(
           "Features Updated Successfully"
@@ -257,6 +216,7 @@ const AdminFeature = () => {
       }
 
   };
+
   return (
 
 <div className="feature-admin">

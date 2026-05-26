@@ -22,7 +22,7 @@ const fetchProject=async()=>{
 try{
 
 const res=await axios.get(
-"http://localhost:5000/api/project"
+"https://cms-3tty.onrender.com/api/project"
 );
 
 if(res.data){
@@ -101,7 +101,7 @@ const updateProject=async()=>{
 try{
 
 await axios.put(
-"http://localhost:5000/api/project",
+"https://cms-3tty.onrender.com/api/project",
 data
 );
 
@@ -315,6 +315,7 @@ Add Image
 <button onClick={updateProject}>
 Update Project
 </button>
+
 <h3>
 Brands Heading
 </h3>
@@ -336,6 +337,7 @@ name="brandsBgColor"
 value={data.brandsBgColor||"#d8c1c1"}
 onChange={handleChange}
 />
+
 </div>
 
 );

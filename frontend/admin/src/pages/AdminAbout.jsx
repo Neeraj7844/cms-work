@@ -5,6 +5,7 @@ useState,
 
 import axios from "axios";
 import "../styles/AdminAbout.css";
+
 const AdminAbout=()=>{
 
 const [data,setData]=useState({
@@ -84,7 +85,7 @@ const fetchAbout=async()=>{
 try{
 
 const res=await axios.get(
-"http://localhost:5000/api/about"
+"https://cms-3tty.onrender.com/api/about"
 );
 
 if(res.data){
@@ -113,7 +114,7 @@ const updateAbout=async()=>{
 try{
 
 await axios.put(
-"http://localhost:5000/api/about",
+"https://cms-3tty.onrender.com/api/about",
 data
 );
 

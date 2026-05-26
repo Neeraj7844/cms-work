@@ -5,6 +5,7 @@ import React, {
 
 import axios from "axios";
 import "../styles/hero.css";
+
 const AdminHero = () => {
 
   // TEXT
@@ -13,8 +14,6 @@ const AdminHero = () => {
 
   const [paragraph, setParagraph] =
     useState("");
-
-
 
   // HEADING STYLE
   const [headingSize, setHeadingSize] =
@@ -26,8 +25,6 @@ const AdminHero = () => {
   const [headingColor, setHeadingColor] =
     useState("#ffffff");
 
-
-
   // PARAGRAPH STYLE
   const [paragraphSize, setParagraphSize] =
     useState("20");
@@ -38,10 +35,6 @@ const AdminHero = () => {
   const [paragraphColor, setParagraphColor] =
     useState("#ffffff");
 
-
-
-
-
   // FETCH HERO DATA
   useEffect(() => {
 
@@ -49,20 +42,14 @@ const AdminHero = () => {
 
   }, []);
 
-
-
-
-
   const fetchHero = async () => {
 
     try {
 
       const res =
         await axios.get(
-          "http://localhost:5000/api/hero"
+          "https://cms-3tty.onrender.com/api/hero"
         );
-
-
 
       if (res.data) {
 
@@ -74,8 +61,6 @@ const AdminHero = () => {
         setParagraph(
           res.data.paragraph || ""
         );
-
-
 
         // HEADING STYLE
         setHeadingSize(
@@ -89,8 +74,6 @@ const AdminHero = () => {
         setHeadingColor(
           res.data.headingColor || "#ffffff"
         );
-
-
 
         // PARAGRAPH STYLE
         setParagraphSize(
@@ -114,6 +97,7 @@ const AdminHero = () => {
     }
 
   };
+
   // UPDATE HERO
   const handleUpdate = async () => {
 
@@ -121,20 +105,16 @@ const AdminHero = () => {
 
       await axios.put(
 
-        "http://localhost:5000/api/hero",
+        "https://cms-3tty.onrender.com/api/hero",
 
         {
 
           heading,
           paragraph,
 
-
-
           headingSize,
           headingWeight,
           headingColor,
-
-
 
           paragraphSize,
           paragraphWeight,
@@ -143,8 +123,6 @@ const AdminHero = () => {
         }
 
       );
-
-
 
       alert(
         "Hero Updated Successfully"
@@ -157,6 +135,7 @@ const AdminHero = () => {
     }
 
   };
+
   return (
 
     <div
@@ -168,11 +147,6 @@ const AdminHero = () => {
       <h1>
         Hero Section CMS
       </h1>
-
-
-
-
-
 
       {/* HEADING */}
       <h2>
@@ -195,11 +169,6 @@ const AdminHero = () => {
         }}
       />
 
-
-
-
-
-
       {/* FONT SIZE */}
       <label>
         Heading Font Size
@@ -219,6 +188,7 @@ const AdminHero = () => {
           marginBottom: "20px",
         }}
       />
+
       {/* FONT WEIGHT */}
       <label>
         Heading Font Weight
@@ -255,6 +225,7 @@ const AdminHero = () => {
         </option>
 
       </select>
+
       {/* FONT COLOR */}
       <label>
         Heading Color
@@ -274,6 +245,7 @@ const AdminHero = () => {
           marginBottom: "20px",
         }}
       />
+
       {/* PARAGRAPH */}
       <h2>
         Paragraph
@@ -294,6 +266,7 @@ const AdminHero = () => {
           marginBottom: "20px",
         }}
       />
+
       {/* PARAGRAPH SIZE */}
       <label>
         Paragraph Font Size
@@ -313,6 +286,7 @@ const AdminHero = () => {
           marginBottom: "20px",
         }}
       />
+
       {/* PARAGRAPH WEIGHT */}
       <label>
         Paragraph Font Weight
@@ -349,6 +323,7 @@ const AdminHero = () => {
         </option>
 
       </select>
+
       {/* PARAGRAPH COLOR */}
       <label>
         Paragraph Color
@@ -368,6 +343,7 @@ const AdminHero = () => {
           marginBottom: "20px",
         }}
       />
+
       {/* BUTTON */}
       <button
         onClick={handleUpdate}

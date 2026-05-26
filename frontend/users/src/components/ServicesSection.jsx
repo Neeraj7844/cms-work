@@ -23,12 +23,14 @@ const ServicesSection = () => {
       cards: [],
 
     });
+
   // FETCH SERVICE DATA
   useEffect(() => {
 
     fetchService();
 
   }, []);
+
   const fetchService =
     async () => {
 
@@ -37,13 +39,9 @@ const ServicesSection = () => {
         const res =
           await axios.get(
 
-            "http://localhost:5000/api/service"
+            "https://cms-3tty.onrender.com/api/service"
 
           );
-
-
-
-
 
         if (res.data) {
 
@@ -60,6 +58,7 @@ const ServicesSection = () => {
       }
 
   };
+
   return (
 
     <section className="services-section">
@@ -78,6 +77,7 @@ const ServicesSection = () => {
           }
 
         </div>
+
         <h2>
 
           {
@@ -89,6 +89,7 @@ const ServicesSection = () => {
           }
 
         </h2>
+
         <p>
 
           {
@@ -102,7 +103,8 @@ const ServicesSection = () => {
         </p>
 
       </div>
-   {/* CARDS */}
+
+      {/* CARDS */}
       <div className="services-grid">
 
         {
@@ -123,9 +125,6 @@ const ServicesSection = () => {
                   key={index}
                 >
 
-
-
-
                   {/* AUTO NUMBER */}
                   <span className="service-number">
 
@@ -137,6 +136,7 @@ const ServicesSection = () => {
                     }
 
                   </span>
+
                   {/* ICON */}
                   <div
 
@@ -176,6 +176,7 @@ const ServicesSection = () => {
                     }
 
                   </div>
+
                   {/* TITLE */}
                   <h3>
 
@@ -188,6 +189,7 @@ const ServicesSection = () => {
                     }
 
                   </h3>
+
                   {/* TEXT */}
                   <p>
 
@@ -219,6 +221,7 @@ const ServicesSection = () => {
         }
 
       </div>
+
       {/* BUTTON */}
       <div className="services-btn-wrapper">
 

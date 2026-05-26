@@ -28,7 +28,7 @@ const fetchProject=async()=>{
 try{
 
 const res=await axios.get(
-"http://localhost:5000/api/project"
+"https://cms-3tty.onrender.com/api/project"
 );
 
 if(res.data){
@@ -145,6 +145,7 @@ display:"block",
 }
 
 </div>
+
 {/* ================= BRANDS SECTION ================= */}
 
 <section
@@ -214,6 +215,7 @@ alt=""
 </div>
 
 </section>
+
 <Footer />
 
 </>

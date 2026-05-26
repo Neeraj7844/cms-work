@@ -35,7 +35,7 @@ const AdminAchievement = () => {
 
         const res =
           await axios.get(
-            "http://localhost:5000/api/achievement"
+            "https://cms-3tty.onrender.com/api/achievement"
           );
 
         if (res.data) {
@@ -171,7 +171,7 @@ const AdminAchievement = () => {
 
         await axios.put(
 
-          "http://localhost:5000/api/achievement",
+          "https://cms-3tty.onrender.com/api/achievement",
 
           data
 
