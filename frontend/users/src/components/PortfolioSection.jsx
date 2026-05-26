@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Portfolio.css";
+import "../styles/portfolio.css";
 
 const PortfolioSection = () => {
 
