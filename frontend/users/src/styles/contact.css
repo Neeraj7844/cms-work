@@ -1,0 +1,813 @@
+/* contact.css */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= HERO SECTION ================= */
+
+.contact-hero{
+  width: 100%;
+  height: 50vh;
+
+  background: #3E533D;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* ================= BACKGROUND TEXT ================= */
+
+.contact-bg-text{
+  position: absolute;
+
+  font-size: 150px;
+  font-weight: 700;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(255,255,255,0.06);
+
+  white-space: nowrap;
+}
+
+/* ================= CONTENT ================= */
+
+.contact-content{
+  position: relative;
+  z-index: 2;
+}
+
+.contact-content h2{
+  color: #fff;
+
+  font-size: 48px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .contact-bg-text{
+    font-size: 70px;
+  }
+
+  .contact-content h2{
+    font-size: 34px;
+    text-align: center;
+  }
+
+}
+/* ================= CONTACT INTRO SECTION ================= */
+
+.contact-intro-section{
+  width: 100%;
+
+  padding: 120px 0 70px;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* CONTAINER */
+
+.contact-intro-container{
+  width: 75%;
+  margin: auto;
+}
+
+/* ================= TOP ROW ================= */
+
+.contact-intro-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 100px;
+
+  position: relative;
+}
+
+/* TOP BLACK BORDER */
+
+.contact-intro-top::before{
+  content: "";
+
+  position: absolute;
+
+  top: -42px;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: #2b2525;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.contact-intro-left{
+  flex: 1;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 28px;
+
+  position: relative;
+}
+
+/* HUGE BACKGROUND TEXT */
+
+.contact-intro-left::before{
+  content: "CONTACT";
+
+  position: absolute;
+
+  left: -255px;
+  top: -70px;
+
+  font-size: 180px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(0,0,0,0.035);
+
+  white-space: nowrap;
+
+  z-index: 0;
+}
+
+/* GREEN SHAPE + LINE WRAPPER */
+
+.contact-green-shape{
+  width: 42px;
+  height: 42px;
+
+  min-width: 42px;
+
+  background: #7ed321;
+
+  clip-path: polygon(
+    25% 6%,
+    75% 6%,
+    100% 50%,
+    75% 94%,
+    25% 94%,
+    0 50%
+  );
+
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 8px;
+}
+
+/* SMALL BLACK LINE */
+
+.contact-small-line{
+  width: 3px;
+  height: 22px;
+
+  background: #2c2626;
+
+  position: absolute;
+
+  left: 18px;
+  top: 72px;
+
+  z-index: 2;
+}
+
+/* HEADING */
+
+.contact-intro-left h2{
+  font-size: 24px;
+  line-height: 1.08;
+
+  font-weight: 700;
+
+  color: #2a2323;
+
+  letter-spacing: -1px;
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 520px;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.contact-intro-right{
+  flex: 1;
+
+  padding-top: 20px;
+}
+
+.contact-intro-right p{
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: #111;
+
+  max-width: 560px;
+
+  font-weight: 400;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+  .contact-intro-left h2{
+    font-size: 38px;
+  }
+
+  .contact-intro-right p{
+    font-size: 17px;
+  }
+
+}
+
+@media(max-width:992px){
+
+  .contact-intro-container{
+    width: 90%;
+  }
+
+  .contact-intro-top{
+    flex-direction: column;
+
+    gap: 60px;
+  }
+
+  .contact-intro-left h2{
+    font-size: 34px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .contact-intro-left::before{
+    display: none;
+  }
+
+  .contact-intro-left{
+    gap: 18px;
+  }
+
+  .contact-intro-left h2{
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .contact-intro-right p{
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .contact-green-shape{
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+  }
+
+  .contact-small-line{
+    left: 15px;
+    top: 60px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .contact-intro-section{
+    padding: 90px 0 50px;
+  }
+
+  .contact-intro-left h2{
+    font-size: 24px;
+  }
+
+}
+/* ================= CONTACT FORM SECTION ================= */
+
+.contact-form-section{
+  width: 100%;
+
+  padding: 20px 0 90px;
+
+  background: #fff;
+}
+
+/* MAIN CONTAINER */
+
+.contact-form-container{
+  width: 74%;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 30% 70%;
+
+  gap: 28px;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.contact-left-box{
+  display: flex;
+  flex-direction: column;
+margin-top: 100PX;
+  gap: 20px;
+}
+
+/* CARD */
+
+.contact-info-card{
+  background: #343234;
+
+  padding: 36px 30px;
+
+  display: flex;
+
+  gap: 15px;
+
+  min-height: 160px;
+
+  transition: 0.4s ease;
+}
+
+.contact-info-card:hover{
+  transform: translateY(-5px);
+}
+
+/* ICON */
+
+.contact-icon{
+  font-size: 38px;
+
+  color: #85db36;
+
+  line-height: 1;
+}
+
+/* CARD HEADING */
+
+.contact-info-card h3{
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 12px;
+}
+
+/* CARD TEXT */
+
+.contact-info-card p{
+  color: #fff;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.contact-right-box{
+  background: #567650;
+
+  padding: 42px 48px;
+
+  border: 14px solid #20351d;
+}
+
+/* TOP TEXT */
+
+.form-top-text{
+  color: #fff;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  margin-bottom: 38px;
+}
+
+/* FORM GRID */
+
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 28px 28px;
+}
+
+/* INPUT GROUP */
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABEL */
+
+.input-group label,
+.message-group label{
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #111;
+
+  margin-bottom: 10px;
+}
+
+/* INPUT */
+
+.input-group input,
+.input-group select{
+  width: 100%;
+  height: 52px;
+
+  border: none;
+  outline: none;
+
+  background: #fff;
+
+  padding: 0 18px;
+
+  font-size: 14px;
+
+  color: #444;
+}
+
+/* SELECT */
+
+.input-group select{
+  background: #0f0d11;
+
+  color: #8b8f99;
+
+  cursor: pointer;
+}
+
+/* MESSAGE */
+
+.message-group{
+  margin-top: 28px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* TEXTAREA */
+
+.message-group textarea{
+  width: 100%;
+  height: 150px;
+
+  border: none;
+  outline: none;
+
+  resize: none;
+
+  background: #fff;
+
+  padding: 18px;
+
+  font-size: 14px;
+
+  color: #444;
+}
+
+/* BUTTON */
+
+.send-btn{
+  margin-top: 32px;
+
+  border: none;
+  outline: none;
+
+  background: #84db35;
+
+  color: #000;
+
+  padding: 16px 34px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  transition: 0.4s ease;
+}
+
+/* BUTTON HOVER */
+
+.send-btn:hover{
+  transform: translateY(-4px);
+
+  background: #97f53f;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+  .contact-right-box{
+    padding: 35px;
+  }
+
+}
+
+@media(max-width:992px){
+
+  .contact-form-container{
+    width: 90%;
+
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .contact-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .contact-right-box{
+    padding: 28px 20px;
+
+    border-width: 8px;
+  }
+
+  .contact-info-card{
+    padding: 28px 20px;
+
+    min-height: auto;
+  }
+
+  .contact-info-card h3{
+    font-size: 16px;
+  }
+
+  .contact-info-card p{
+    font-size: 14px;
+  }
+
+  .form-top-text{
+    font-size: 14px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .contact-info-card{
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .send-btn{
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}
+/* ================= BRANDS SECTION ================= */
+
+.contact-brands-section{
+  width: 100%;
+
+  padding: 110px 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+  url("https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=1974&auto=format&fit=crop");
+  
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-brands-overlay{
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0,0,0,0.78);
+}
+
+.contact-brands-container{
+  width: 78%;
+
+  margin: auto;
+
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 90px;
+}
+
+/* TOP LINE */
+
+.contact-brands-line{
+  position: absolute;
+
+  top: -30px;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: rgba(255,255,255,0.25);
+}
+
+/* LEFT */
+
+.contact-brands-left{
+  width: 320px;
+
+  display: flex;
+  gap: 28px;
+}
+
+.contact-green-shape{
+  width: 34px;
+  height: 34px;
+
+  background: #8ad63a;
+
+  clip-path: polygon(
+    25% 6%,
+    75% 6%,
+    100% 50%,
+    75% 94%,
+    25% 94%,
+    0 50%
+  );
+
+  margin-top: 10px;
+
+  position: relative;
+}
+
+.contact-green-shape::after{
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 58px;
+
+  transform: translateX(-50%);
+
+  width: 2px;
+  height: 24px;
+
+  background: rgba(255,255,255,0.35);
+}
+
+.contact-brands-left h2{
+  color: #fff;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+}
+
+/* RIGHT GRID */
+
+.contact-brands-grid{
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 70px 80px;
+
+  padding-top: 10px;
+}
+
+.brand-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.45;
+
+  transition: 0.4s ease;
+
+  cursor: pointer;
+}
+
+.brand-item img{
+  width: 70px;
+
+  object-fit: contain;
+
+  filter: grayscale(100%) brightness(1.7);
+
+  transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+
+.brand-item:hover{
+  opacity: 1;
+
+  transform: translateY(-10px);
+}
+
+.brand-item:hover img{
+  filter:
+  brightness(1)
+  saturate(8)
+  sepia(1)
+  hue-rotate(15deg);
+
+  transform: scale(1.08);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+  .contact-brands-container{
+    flex-direction: column;
+  }
+
+  .contact-brands-grid{
+    width: 100%;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .contact-brands-left h2{
+    font-size: 34px;
+  }
+
+  .contact-brands-grid{
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 50px;
+  }
+
+  .brand-item img{
+    width: 65px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .contact-brands-grid{
+    grid-template-columns: 1fr;
+  }
+
+}

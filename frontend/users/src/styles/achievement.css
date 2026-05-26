@@ -1,0 +1,344 @@
+/* =========================
+   ACHIEVEMENT SECTION
+========================= */
+.ne{
+  display: flex;
+  justify-content: center;
+  gap:12px;
+  margin-left: 160px;
+}
+.achievement-section {
+
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  background: #f7f7f7;
+
+  padding-top: 55px;
+  padding-bottom: 55px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 40px;
+
+  overflow: hidden;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.achievement-left {
+
+  width: 52%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* =========================
+   TAG
+========================= */
+
+.achievement-tag {
+
+  width: 125px;
+
+  height: 36px;
+
+  border-radius: 6px;
+
+  background: linear-gradient(to right, #d9f6f9, #d7d8ff);
+
+  color: #1565ff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.achievement-left h2 {
+
+  margin-top: 16px;
+
+  font-size: 36px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+
+  color: #5d7659;
+
+  width: 100%;
+
+  max-width: 480px;
+
+  overflow-wrap: break-word;
+
+  word-break: break-word;
+}
+
+/* =========================
+   PARAGRAPH
+========================= */
+
+.achievement-left p {
+
+  margin-top: 18px;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  color: #222;
+
+  width: 100%;
+
+  max-width: 480px;
+
+  overflow-wrap: break-word;
+
+  word-break: break-word;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.achievement-right {
+
+  width: 48%;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 16px;
+
+  overflow: hidden;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.achievement-card {
+
+  width: 135px;
+
+  height: 195px;
+
+  background: #fff;
+
+  border-radius: 7px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+
+  transition: 0.3s ease;
+}
+
+.achievement-card:hover {
+
+  transform: translateY(-5px);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.achievement-icon {
+
+  width: 58px;
+
+  height: 58px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 24px;
+
+  color: #fff;
+}
+
+.pink {
+
+  background: linear-gradient(135deg, #ff9966, #ff3366);
+}
+
+.blue {
+
+  background: linear-gradient(135deg, #33ccff, #003cff);
+}
+
+.purple {
+
+  background: linear-gradient(135deg, #d91cff, #7a2cff);
+}
+
+/* =========================
+   NUMBER
+========================= */
+
+.achievement-card h3 {
+
+  margin-top: 18px;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  color: #08145f;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.achievement-card span {
+
+  margin-top: 6px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #08145f;
+
+  text-align: center;
+
+  line-height: 1.5;
+
+  padding: 0 8px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1400px) {
+
+  .achievement-section {
+
+    padding-left: 30px;
+
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .achievement-section {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .achievement-left,
+  .achievement-right {
+
+    width: 100%;
+  }
+
+  .achievement-right {
+
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .achievement-section {
+
+    padding-left: 18px;
+
+    padding-right: 18px;
+
+    padding-top: 45px;
+
+    padding-bottom: 45px;
+  }
+
+  .achievement-left h2 {
+
+    font-size: 28px;
+
+    max-width: 100%;
+  }
+
+  .achievement-left p {
+
+    font-size: 12px;
+
+    max-width: 100%;
+  }
+
+  .achievement-right {
+
+    justify-content: center;
+
+    gap: 12px;
+  }
+
+  .achievement-card {
+
+    width: 125px;
+
+    height: 180px;
+  }
+
+  .achievement-card h3 {
+
+    font-size: 28px;
+  }
+}
+
+/* =========================
+   BODY FIX
+========================= */
+
+body{
+
+  overflow-x: hidden;
+}

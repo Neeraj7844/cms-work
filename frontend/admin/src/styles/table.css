@@ -1,0 +1,32 @@
+.recent-table {
+  background: #fff;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.recent-table h2 {
+  margin-bottom: 25px;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 18px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #eee;
+}
+
+table th {
+  background: #f9fafb;
+}

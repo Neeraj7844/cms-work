@@ -1,0 +1,247 @@
+/* =========================
+   FEATURE SECTION
+========================= */
+
+.feature-section {
+  width: 100%;
+
+  background: #f7f7f7;
+
+  padding: 70px 15px;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   FEATURE BUTTON
+========================= */
+
+.feature-tag {
+  width: 145px;
+  height: 42px;
+
+  margin: 0 auto;
+
+  border-radius: 6px;
+
+  background: #dff0dc;
+
+  color: #ff2b78;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+
+.feature-tag:hover {
+  transform: scale(1.06);
+
+  background: #cde7c7;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.feature-section h2 {
+  margin-top: 20px;
+
+  font-size: 38px;
+  line-height: 1.2;
+
+  color: #5f7759;
+
+  font-weight: 800;
+
+  width: fit-content;
+  max-width: 520px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.feature-desc {
+  margin: 18px auto 0;
+
+  width: 100%;
+  max-width: 500px;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: #222;
+
+  text-align: center;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.feature-cards {
+  margin-top: 40px;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.feature-card {
+  width: 100%;
+
+  background: white;
+
+  padding: 25px 18px;
+
+  border-radius: 6px;
+
+  box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+
+  transition: 0.3s ease;
+
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+/* COLORS */
+
+.pink {
+  background: #ffe9e9;
+}
+
+.green {
+  background: #edf8dc;
+}
+
+.blue {
+  background: #e6f1ff;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+
+  color: #5f7759;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.feature-card p {
+  margin-top: 12px;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  color: #222;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .feature-cards {
+    grid-template-columns: 1fr;
+
+    max-width: 420px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .feature-section {
+    padding: 50px 12px;
+  }
+
+  .feature-tag {
+    width: 120px;
+    height: 38px;
+
+    font-size: 14px;
+  }
+
+  .feature-section h2 {
+    font-size: 28px;
+
+    max-width: 100%;
+  }
+
+  .feature-desc {
+    font-size: 13px;
+
+    max-width: 100%;
+  }
+
+}
