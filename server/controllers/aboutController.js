@@ -1,190 +1,232 @@
-import About from "../models/AboutModel.js";
+import AboutModel from "../models/AboutModel.js";
 
-export const getAbout=async(req,res)=>{
+/* GET ABOUT */
+
+export const getAbout =
+async(req,res)=>{
 
 try{
 
-let data=await About.findOne();
-
-if(!data){
-
-data=await About.create({
-
-/* HERO */
-
-heroTitle:"ABOUT US",
-
-heroBgImage:
-"https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-
-heroOverlayColor:"#375237",
-
-heroOpacity:"0.72",
-
-heroBgHeight:"650px",
-
-heroBgWidth:"100%",
-
-heroBgSize:"cover",
-
-heroBgRepeat:"no-repeat",
-
-heroBgPosition:"center",
-
-/* REASONS */
-
-reasonsHeading:
-"THERE ARE MANY REASONS TO CHOICE US",
-
-reasonsParagraph:
-"We blend creativity, strategy, and dependability to deliver design solutions that truly make an impact.",
-
-reasonsImage:
-"https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
-
-reasonsImageRadius:"0px",
-
-sideText:
-"CRAVING FOR EXCELLENCE",
-
-serveHeading:
-"We are here to serve you!",
-
-serveParagraph1:
-"Established in 2018, Design U Crave Technologies is a Gurgaon, India based organization.",
-
-serveParagraph2:
-"A one-stop-shop for all your web needs.",
-
-/* SKILLS */
-
-skills:[
-{
-title:"UI/UX DESIGN",
-percentage:70,
-barColor:"#7ed321",
-},
-{
-title:"MARKETING",
-percentage:90,
-barColor:"#7ed321",
-},
-{
-title:"WEB DEVELOPMENT",
-percentage:75,
-barColor:"#7ed321",
-},
-],
-
-/* COUNTERS */
-
-counters:[
-{
-icon:"📄",
-number:"2.205",
-text:"Completed Projects",
-},
-{
-icon:"👥",
-number:"54+",
-text:"Active Members",
-},
-{
-icon:"🏆",
-number:"14+",
-text:"Award Winning",
-},
-{
-icon:"🎖️",
-number:"100%",
-text:"Satisfaction Rate",
-},
-],
-
-counterBgColor:"#456b42",
-
-/* MISSION */
-
-missionImage:
-"https://images.unsplash.com/photo-1552664730-d307ca884978",
-
-missionTitle:"OUR MISSON",
-
-missionHeading:
-"OUR COMPANY IS BUILT ON PEOPLE",
-
-missionParagraph1:
-"We provide premium technology services.",
-
-missionParagraph2:
-"Our goal stands to help businesses operating on all parallels.",
-
-/* COLORS */
-
-backgroundColor:"#ffffff",
-
-headingColor:"#3d5d39",
-
-paragraphColor:"#222222",
-
-/* FONT */
-
-heroFontSize:"78px",
-
-headingFontSize:"40px",
-
-paragraphFontSize:"15px",
-
-heroFontWeight:"700",
-
-headingFontWeight:"600",
-
-paragraphFontWeight:"400",
-
-/* IMAGE */
-
-imageHeight:"500px",
-
-imageWidth:"90%",
-
-imageRadius:"0px",
-
-});
-
-}
+const data =
+await AboutModel.findOne();
 
 res.json(data);
 
 }catch(error){
 
+console.log(error);
+
 res.status(500).json({
-message:error.message,
+
+message:error.message
+
 });
 
 }
 
 };
 
-export const updateAbout=async(req,res)=>{
+/* UPDATE ABOUT */
+
+export const updateAbout =
+async(req,res)=>{
 
 try{
 
-const updated=
-await About.findOneAndUpdate(
-{},
-req.body,
-{
-new:true,
-upsert:true,
-}
-);
+console.log("BODY =>",req.body);
 
-res.json(updated);
+console.log("FILES =>",req.files);
+
+let data =
+await AboutModel.findOne();
+
+/* FILE FUNCTION */
+
+const getFile=(name)=>{
+
+if(
+
+req.files &&
+req.files[name] &&
+req.files[name][0]
+
+){
+
+return `http://localhost:5000/uploads/${req.files[name][0].filename}`;
+
+}
+
+return null;
+
+};
+
+/* CREATE */
+
+if(!data){
+
+data =
+new AboutModel({
+
+heroTitle:
+req.body.heroTitle || "",
+
+heroBgImage:
+getFile("heroBgFile") ||
+req.body.heroBgImage ||
+"",
+
+reasonsHeading:
+req.body.reasonsHeading || "",
+
+reasonsParagraph:
+req.body.reasonsParagraph || "",
+
+reasonsImage:
+getFile("reasonsImageFile") ||
+req.body.reasonsImage ||
+"",
+
+sideText:
+req.body.sideText || "",
+
+serveHeading:
+req.body.serveHeading || "",
+
+serveParagraph1:
+req.body.serveParagraph1 || "",
+
+serveParagraph2:
+req.body.serveParagraph2 || "",
+
+missionImage:
+getFile("missionImageFile") ||
+req.body.missionImage ||
+"",
+
+missionTitle:
+req.body.missionTitle || "",
+
+missionHeading:
+req.body.missionHeading || "",
+
+missionParagraph1:
+req.body.missionParagraph1 || "",
+
+missionParagraph2:
+req.body.missionParagraph2 || "",
+
+backgroundColor:
+req.body.backgroundColor || "#ffffff",
+
+headingColor:
+req.body.headingColor || "#3d5d39",
+
+paragraphColor:
+req.body.paragraphColor || "#222222",
+
+});
+
+}
+
+/* UPDATE */
+
+else{
+
+data.heroTitle =
+req.body.heroTitle || data.heroTitle;
+
+data.heroBgImage =
+getFile("heroBgFile") ||
+req.body.heroBgImage ||
+data.heroBgImage;
+
+data.reasonsHeading =
+req.body.reasonsHeading ||
+data.reasonsHeading;
+
+data.reasonsParagraph =
+req.body.reasonsParagraph ||
+data.reasonsParagraph;
+
+data.reasonsImage =
+getFile("reasonsImageFile") ||
+req.body.reasonsImage ||
+data.reasonsImage;
+
+data.sideText =
+req.body.sideText ||
+data.sideText;
+
+data.serveHeading =
+req.body.serveHeading ||
+data.serveHeading;
+
+data.serveParagraph1 =
+req.body.serveParagraph1 ||
+data.serveParagraph1;
+
+data.serveParagraph2 =
+req.body.serveParagraph2 ||
+data.serveParagraph2;
+
+data.missionImage =
+getFile("missionImageFile") ||
+req.body.missionImage ||
+data.missionImage;
+
+data.missionTitle =
+req.body.missionTitle ||
+data.missionTitle;
+
+data.missionHeading =
+req.body.missionHeading ||
+data.missionHeading;
+
+data.missionParagraph1 =
+req.body.missionParagraph1 ||
+data.missionParagraph1;
+
+data.missionParagraph2 =
+req.body.missionParagraph2 ||
+data.missionParagraph2;
+
+data.backgroundColor =
+req.body.backgroundColor ||
+data.backgroundColor;
+
+data.headingColor =
+req.body.headingColor ||
+data.headingColor;
+
+data.paragraphColor =
+req.body.paragraphColor ||
+data.paragraphColor;
+
+}
+
+/* SAVE */
+
+await data.save();
+
+res.json({
+
+success:true,
+message:"About Updated Successfully"
+
+});
 
 }catch(error){
 
+console.log(
+"ABOUT ERROR =>",
+error
+);
+
 res.status(500).json({
-message:error.message,
+
+success:false,
+message:error.message
+
 });
 
 }

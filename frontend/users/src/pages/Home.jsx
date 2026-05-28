@@ -10,7 +10,8 @@ import AchievementSection from "../components/AchievementSection";
  import ProgressSection from "../components/ProgressSection";
   import Testimonial from "../components/Testimonial";
  import Footer from "../components/Footer";
-
+import Neab from "../components/Neab";
+import BlogSection from "../components/BlogSection";
 const Home = () => {
   return (
     <>
@@ -20,7 +21,7 @@ const Home = () => {
       <Hero />
 
       <FeatureSection />
-    
+      <Neab/>
       <AchievementSection />
       <ServicesSection />
 
@@ -31,7 +32,7 @@ const Home = () => {
        <ProgressSection />
 
      <Testimonial />
-
+    <BlogSection/>
       <Footer /> 
 
     </>

@@ -1,276 +1,574 @@
-// About.jsx
+import React,{
+useEffect,
+useState
+} from "react";
 
-import React from "react";
+import axios from "axios";
+
 import "../styles/about.css";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-const About = () => {
-  return (
-    <>
 
-      {/* HERO SECTION */}
+const About=()=>{
 
-      <Navbar />
+const [aboutData,setAboutData]=
+useState({});
 
-      <section className="about-hero">
+useEffect(()=>{
 
-        <div className="about-overlay"></div>
+fetchAbout();
 
-        <div className="about-content">
-          <h1>ABOUT US</h1>
-        </div>
+},[]);
 
-      </section>
+const fetchAbout=async()=>{
 
-      {/* ================= REASONS SECTION ================= */}
+try{
 
-      <section className="reasons-section">
+const res=
+await axios.get(
+"http://localhost:5000/api/about"
+);
 
-        <div className="reasons-container">
+if(res.data){
 
-          {/* TOP */}
+setAboutData(res.data);
 
-          <div className="reasons-top">
+}
 
-            <div className="reasons-left">
+}catch(error){
 
-              <div className="green-shape"></div>
+console.log(error);
 
-              <h2>
-                THERE ARE MANY REASONS
-                TO CHOICE US
-              </h2>
+}
 
-            </div>
+};
 
-            <div className="reasons-right">
+return(
 
-              <p>
-                We blend creativity, strategy, and dependability
-                to deliver design solutions that truly make an impact.
-              </p>
+<>
 
-            </div>
+<Navbar/>
 
-          </div>
+{/* HERO */}
 
-          {/* BOTTOM */}
+<section
 
-          <div className="reasons-bottom">
+className="about-hero"
 
-            {/* IMAGE */}
+style={{
 
-            <div className="reasons-image">
+backgroundImage:
+`linear-gradient(rgba(55,82,55,0.72),rgba(55,82,55,0.72)),url(${aboutData.heroBgImage})`
 
-              <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-                alt="team"
-              />
+}}
 
-              <div className="image-side-text">
-                CRAVING FOR EXCELLENCE
-              </div>
+>
 
-            </div>
+<div className="about-content">
 
-            {/* CONTENT */}
+<h1>
 
-            <div className="reasons-content">
+{
 
-              <h3>We are here to serve you!</h3>
+aboutData.heroTitle ||
 
-              <p>
-                Established in 2018, Design U Crave Technologies
-                is a Gurgaon, India based organization.
-                We are a team of web developers, web designers,
-                e-commerce experts, Content Writers and
-                Social Media Marketers.
-              </p>
+"ABOUT US"
 
-              <p>
-                A one-stop-shop for all your web needs,
-                Design U Crave Technologies provides a fresh
-                and youthful perspective towards designing
-                the ideal website.
-              </p>
+}
 
-              {/* SKILLS */}
+</h1>
 
-              <div className="skill">
+</div>
 
-                <div className="skill-head">
-                  <span>UI/UX DESIGN</span>
-                  <span>70%</span>
-                </div>
+</section>
 
-                <div className="skill-bar">
-                  <div
-                    className="skill-fill"
-                    style={{ width: "70%" }}
-                  ></div>
-                </div>
+{/* REASONS */}
 
-              </div>
+<section className="reasons-section">
 
-              <div className="skill">
+<div className="reasons-container">
 
-                <div className="skill-head">
-                  <span>MARKETING</span>
-                  <span>90%</span>
-                </div>
+{/* TOP */}
 
-                <div className="skill-bar">
-                  <div
-                    className="skill-fill"
-                    style={{ width: "90%" }}
-                  ></div>
-                </div>
+<div className="reasons-top">
 
-              </div>
+<div className="reasons-left">
 
-              <div className="skill">
+<div className="green-shape"></div>
 
-                <div className="skill-head">
-                  <span>WEB DEVELOPMENT</span>
-                  <span>75%</span>
-                </div>
+<h2>
 
-                <div className="skill-bar">
-                  <div
-                    className="skill-fill"
-                    style={{ width: "75%" }}
-                  ></div>
-                </div>
+{
 
-              </div>
+aboutData.reasonsHeading ||
 
-            </div>
+"THERE ARE MANY REASONS TO CHOICE US"
 
-          </div>
+}
 
-        </div>
+</h2>
 
-      </section>
+</div>
 
-      {/* ================= COUNTER SECTION ================= */}
+<div className="reasons-right">
 
-      <section className="counter-section">
+<p>
 
-        <div className="counter-container">
+{
 
-          <div className="counter-box">
+aboutData.reasonsParagraph ||
 
-            <div className="counter-icon">
-              📄
-            </div>
+"We blend creativity, strategy, and dependability to deliver design solutions that truly make an impact."
 
-            <h2>2.205</h2>
+}
 
-            <p>Completed Projects</p>
+</p>
 
-          </div>
+</div>
 
-          <div className="counter-box">
+</div>
 
-            <div className="counter-icon">
-              👥
-            </div>
+{/* BOTTOM */}
 
-            <h2>54+</h2>
+<div className="reasons-bottom">
 
-            <p>Active Members</p>
+{/* IMAGE */}
 
-          </div>
+<div className="reasons-image">
 
-          <div className="counter-box">
+<img
+src={aboutData.reasonsImage}
+alt=""
+/>
 
-            <div className="counter-icon">
-              🏆
-            </div>
+<div className="image-side-text">
 
-            <h2>14+</h2>
+{
 
-            <p>Award Winning</p>
+aboutData.sideText ||
 
-          </div>
+"CRAVING FOR EXCELLENCE"
 
-          <div className="counter-box">
+}
 
-            <div className="counter-icon">
-              🎖️
-            </div>
+</div>
 
-            <h2>100%</h2>
+</div>
 
-            <p>Satisfaction Rate</p>
+{/* CONTENT */}
 
-          </div>
+<div className="reasons-content">
 
-        </div>
+<h3>
 
-      </section>
+{
 
-{/* ================= MISSION SECTION ================= */}
+aboutData.serveHeading ||
+
+"We are here to serve you!"
+
+}
+
+</h3>
+
+<p>
+
+{
+
+aboutData.serveParagraph1 ||
+
+"Established in 2018, Design U Crave Technologies is a Gurgaon, India based organization."
+
+}
+
+</p>
+
+<p>
+
+{
+
+aboutData.serveParagraph2 ||
+
+"A one-stop-shop for all your web needs."
+
+}
+
+</p>
+
+{/* SKILL 1 */}
+
+<div className="skill">
+
+<div className="skill-head">
+
+<span>
+
+UI/UX DESIGN
+
+</span>
+
+<span>
+
+70%
+
+</span>
+
+</div>
+
+<div className="skill-bar">
+
+<div
+
+className="skill-fill"
+
+style={{
+
+width:"70%"
+
+}}
+
+></div>
+
+</div>
+
+</div>
+
+{/* SKILL 2 */}
+
+<div className="skill">
+
+<div className="skill-head">
+
+<span>
+
+MARKETING
+
+</span>
+
+<span>
+
+90%
+
+</span>
+
+</div>
+
+<div className="skill-bar">
+
+<div
+
+className="skill-fill"
+
+style={{
+
+width:"90%"
+
+}}
+
+></div>
+
+</div>
+
+</div>
+
+{/* SKILL 3 */}
+
+<div className="skill">
+
+<div className="skill-head">
+
+<span>
+
+WEB DEVELOPMENT
+
+</span>
+
+<span>
+
+75%
+
+</span>
+
+</div>
+
+<div className="skill-bar">
+
+<div
+
+className="skill-fill"
+
+style={{
+
+width:"75%"
+
+}}
+
+></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{/* COUNTER */}
+
+<section className="counter-section">
+
+<div className="counter-container">
+
+<div className="counter-box">
+
+<div className="counter-icon">
+
+{
+
+aboutData.missionCard1Icon ||
+
+"⚙"
+
+}
+
+</div>
+
+<h2>
+
+{
+
+aboutData.missionCard1Number ||
+
+"2.205"
+
+}
+
+</h2>
+
+<p>
+
+{
+
+aboutData.missionCard1Text ||
+
+"Completed Projects"
+
+}
+
+</p>
+
+</div>
+
+<div className="counter-box">
+
+<div className="counter-icon">
+
+{
+
+aboutData.missionCard2Icon ||
+
+"👥"
+
+}
+
+</div>
+
+<h2>
+
+{
+
+aboutData.missionCard2Number ||
+
+"54+"
+
+}
+
+</h2>
+
+<p>
+
+{
+
+aboutData.missionCard2Text ||
+
+"Active Members"
+
+}
+
+</p>
+
+</div>
+
+<div className="counter-box">
+
+<div className="counter-icon">
+
+{
+
+aboutData.missionCard3Icon ||
+
+"🏆"
+
+}
+
+</div>
+
+<h2>
+
+{
+
+aboutData.missionCard3Number ||
+
+"14+"
+
+}
+
+</h2>
+
+<p>
+
+{
+
+aboutData.missionCard3Text ||
+
+"Award Winning"
+
+}
+
+</p>
+
+</div>
+
+<div className="counter-box">
+
+<div className="counter-icon">
+
+{
+
+aboutData.missionCard4Icon ||
+
+"🎖"
+
+}
+
+</div>
+
+<h2>
+
+{
+
+aboutData.missionCard4Number ||
+
+"100%"
+
+}
+
+</h2>
+
+<p>
+
+{
+
+aboutData.missionCard4Text ||
+
+"Satisfaction Rate"
+
+}
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+{/* MISSION */}
 
 <section className="mission-section">
 
-  <div className="mission-container">
+<div className="mission-container">
 
-    {/* LEFT IMAGE */}
+<div className="mission-image">
 
-    <div className="mission-image">
+<div className="mission-image-border">
 
-      <div className="mission-image-border">
+<img
+src={aboutData.missionImage}
+alt=""
+/>
 
-        <img
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-          alt="mission"
-        />
+</div>
 
-      </div>
+</div>
 
-    </div>
+<div className="mission-content">
 
-    {/* RIGHT CONTENT */}
+<h2>
 
-    <div className="mission-content">
+{
 
-      <h2>OUR MISSON</h2>
+aboutData.missionHeading ||
 
-      <h3>
-        “OUR COMPANY IS BUILT ON PEOPLE – THOSE WHO WORK
-        FOR US, AND THOSE WE DO BUSINESS WITH”
-      </h3>
+"OUR MISSION"
 
-      <p>
-        We, at Design U Crave Technologies, behold the primary motive
-        of providing premium technology services at affordable rates,
-        to our clients. With the assistance of some of the best
-        professionals in the field, we prize honesty and innovation
-        to be our key standards.
-      </p>
+}
 
-      <p>
-        Further, our goal stands to help businesses operating on
-        all parallels, whether it may be E-commerce, Retail,
-        Wholesale joints or Healthcare.
-  
-        Our essential moral compass and elevated work culture are
-        formed based on our key criteria towards building blocks
-        of online superiority.
-        With honesty and innovation, as our light,
-        Design U Crave Technologies is designed
-        to help businesses.
-      </p>
+</h2>
 
-    </div>
+<h3>
 
-  </div>
+{
+
+aboutData.missionSubheading ||
+
+"OUR COMPANY IS BUILT ON PEOPLE"
+
+}
+
+</h3>
+
+<p>
+
+{
+
+aboutData.missionParagraph1 ||
+
+"We provide premium technology services."
+
+}
+
+</p>
+
+<p>
+
+{
+
+aboutData.missionParagraph2 ||
+
+"We help businesses grow online."
+
+}
+
+</p>
+
+</div>
+
+</div>
 
 </section>
-   <Footer /> 
-    </>
-  );
+
+<Footer/>
+
+</>
+
+);
+
 };
 
 export default About;

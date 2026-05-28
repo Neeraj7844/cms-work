@@ -8,6 +8,14 @@ import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import TestPage from "./pages/TestPage";
 
+/* BLOG PAGE IMPORT */
+
+import BrandIdentityBlog
+from "./components/BrandIdentityBlog";
+import DesignDigitalBlog
+from "./components/DesignDigitalBlog";
+import DigitalMarketingBlog
+from "./components/DigitalMarketingBlog";
 function App() {
 
   return (
@@ -33,10 +41,26 @@ function App() {
         path="/contact"
         element={<Contact />}
       />
-  <Route 
-    path="/testpage"
-    element={<TestPage/>}
-    />
+
+      <Route 
+        path="/testpage"
+        element={<TestPage/>}
+      />
+
+      {/* BLOG PAGE ROUTE */}
+
+      <Route
+        path="/brand-identity-blog"
+        element={<BrandIdentityBlog />}
+      />
+      <Route
+      path="/design-digital-blog"
+      element={<DesignDigitalBlog />}
+      />
+      <Route
+      path="/digital-marketing-blog"
+      element={<DigitalMarketingBlog />}
+      />
     </Routes>
 
   );

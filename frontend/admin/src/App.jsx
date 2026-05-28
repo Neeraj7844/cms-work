@@ -4,7 +4,6 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
@@ -17,6 +16,7 @@ import AdminTestimonial from "./pages/AdminTestimonial";
 import AdminAbout from "./pages/AdminAbout";
 import AdminProject from "./pages/AdminProject";
 import FormData from "./pages/FormData";
+import AdminNeab from "./pages/AdminNeab";
 const App = () => {
   return (
     <Routes>
@@ -72,6 +72,10 @@ const App = () => {
           element={<FormData />}
         />
         <Route path="/login" element={<Login />} />
+       <Route
+  path="/admin/neab"
+  element={<AdminNeab />}
+/>
     </Routes>
   );
 };

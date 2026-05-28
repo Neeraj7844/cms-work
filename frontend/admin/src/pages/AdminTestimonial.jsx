@@ -37,7 +37,7 @@ const fetchData=async()=>{
 try{
 
 const res=await axios.get(
-"https://cms-3tty.onrender.com/api/testimonial"
+"http://localhost:5000/api/testimonial"
 );
 
 if(res.data){
@@ -114,7 +114,7 @@ const updateData=async()=>{
 try{
 
 await axios.put(
-"https://cms-3tty.onrender.com/api/testimonial",
+"http://localhost:5000/api/testimonial",
 data
 );
 

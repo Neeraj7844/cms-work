@@ -28,7 +28,7 @@ const fetchProject=async()=>{
 try{
 
 const res=await axios.get(
-"https://cms-3tty.onrender.com/api/project"
+"http://localhost:5000/api/project"
 );
 
 if(res.data){
@@ -151,13 +151,27 @@ display:"block",
 <section
 className="brands-section"
 style={{
-background:projectData.brandsBgColor||"#d8c1c1",
+background:
+`linear-gradient(
+rgba(214,190,190,0.92),
+rgba(214,190,190,0.92)
+),
+url(${projectData.brandsBgImage ||
+"https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2000"})`
 }}
 >
 
 <div className="brands-container">
 
+{/* TOP LINE */}
+
 <div className="brands-top-line"></div>
+
+{/* MAIN CONTENT */}
+
+<div className="brands-content">
+
+{/* LEFT SIDE */}
 
 <div className="brands-left">
 
@@ -166,48 +180,65 @@ background:projectData.brandsBgColor||"#d8c1c1",
 <div className="brands-heading">
 
 <h2>
-{projectData.brandsHeading}
+{
+projectData.brandsHeading ||
+"BRANDS WE'VE COLLABORATED WITH TEAM."
+}
 </h2>
 
 </div>
 
 </div>
 
+{/* RIGHT SIDE */}
+
 <div className="brands-logos">
 
 <div className="brand-logo">
+
 <img
 src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
 alt=""
 />
+
 </div>
 
 <div className="brand-logo">
+
 <img
 src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
 alt=""
 />
+
 </div>
 
 <div className="brand-logo">
+
 <img
 src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
 alt=""
 />
+
 </div>
 
 <div className="brand-logo">
+
 <img
 src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"
 alt=""
 />
+
 </div>
 
 <div className="brand-logo">
+
 <img
 src="https://cdn-icons-png.flaticon.com/512/5968/5968875.png"
 alt=""
 />
+
+</div>
+
 </div>
 
 </div>

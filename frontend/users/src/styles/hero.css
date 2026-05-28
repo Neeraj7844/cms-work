@@ -4,7 +4,7 @@
 
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: 92vh;
 
   background: #657c61;
 
@@ -12,53 +12,70 @@
 
   overflow: hidden;
 
-  /* TOP SPACE KAM */
-  padding-top: 35px;
+  padding-top: 20px;
 }
+.hero-image-box img {
+  width: 100%;
 
+  max-width: 650px;
+
+  display: block;
+
+  object-fit: contain;
+}
 /* =========================
    CONTAINER
 ========================= */
 
 .hero-container {
-  max-width: 1550px;
+  max-width: 1500px;
 
   margin: 0 auto;
 
-  padding: 0 90px;
+  padding: 0 70px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
 
   align-items: center;
 
-  gap: 30px;
+  gap: 20px;
 }
 
 /* =========================
    LEFT CONTENT
 ========================= */
+.hero-left {
+  text-align: left;
+}
 
 .hero-left h1 {
-  font-size: 78px;
-  line-height: 1.08;
+  font-size: 66px;
+
+  line-height: 1.05;
 
   color: white;
 
   font-weight: 800;
 
+  margin-left: 0;
   letter-spacing: -2px;
+  text-align: left;
+  max-width: 760px;
 }
 
 .hero-left p {
-  margin-top: 32px;
+  margin-top: 24px;
 
-  max-width: 760px;
+  max-width: 700px;
 
-  font-size: 24px;
-  line-height: 1.7;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: left;
 
-  color: rgba(255,255,255,0.85);
+  margin-left: 0;
+  margin-right: 0;
+  color: rgba(255,255,255,0.88);
 }
 
 /* =========================
@@ -66,10 +83,10 @@
 ========================= */
 
 .hero-btn {
-  margin-top: 34px;
+  margin-top: 28px;
 
-  width: 170px;
-  height: 52px;
+  width: 160px;
+  height: 48px;
 
   border: none;
   border-radius: 6px;
@@ -78,7 +95,7 @@
 
   color: white;
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 
   cursor: pointer;
@@ -87,11 +104,11 @@
 }
 
 .hero-btn:hover {
-  transform: scale(1.07);
+  transform: scale(1.05);
 }
 
 /* =========================
-   RIGHT
+   RIGHT SECTION
 ========================= */
 
 .hero-right {
@@ -103,13 +120,14 @@
 }
 
 /* =========================
-   IMAGE SPACE
+   IMAGE BOX
 ========================= */
 
 .hero-image-box {
   width: 100%;
-  max-width: 760px;
-  height: 720px;
+  max-width: 700px;
+
+  height: 560px;
 
   display: flex;
   align-items: center;
@@ -120,8 +138,8 @@
 
 .hero-image-box img {
   width: 100%;
-  max-width: 720px;
-
+  max-width: 640px;
+  
   object-fit: contain;
 }
 
@@ -132,13 +150,12 @@
 .mail-box {
   position: absolute;
 
-  /* TEXT KE BARABAR */
-  top: 120px;
-  right: 40px;
+  top: 90px;
+  right: 30px;
 
-  font-size: 70px;
+  font-size: 108px;
 
-  animation: floatMail 3s ease-in-out infinite;
+  animation: floatMail 2s ease-in-out infinite;
 }
 
 @keyframes floatMail {
@@ -148,7 +165,7 @@
   }
 
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
   }
 
   100% {
@@ -164,14 +181,14 @@
 .social-sidebar {
   position: absolute;
 
-  left: 20px;
-  bottom: 60px;
+  left: 18px;
+  bottom: 45px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  gap: 18px;
+  gap: 14px;
 }
 
 .social-text {
@@ -179,15 +196,15 @@
 
   transform: rotate(180deg);
 
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 
   color: white;
 }
 
 .social-btn {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
 
   border: none;
   border-radius: 6px;
@@ -196,7 +213,7 @@
 
   color: white;
 
-  font-size: 22px;
+  font-size: 20px;
 
   cursor: pointer;
 
@@ -204,31 +221,77 @@
 }
 
 .social-btn:hover {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 /* =========================
-   RESPONSIVE
+   LARGE LAPTOP
 ========================= */
 
 @media (max-width: 1400px) {
 
+  .hero-container {
+    padding: 0 50px;
+  }
+
   .hero-left h1 {
-    font-size: 62px;
+    font-size: 58px;
   }
 
   .hero-left p {
-    font-size: 21px;
+    font-size: 18px;
+  }
+
+  .hero-image-box {
+    height: 500px;
   }
 
 }
 
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+
+  .hero-left h1 {
+    font-size: 52px;
+  }
+
+  .hero-left p {
+    font-size: 17px;
+  }
+
+  .hero-image-box {
+    height: 440px;
+  }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 1100px) {
+
+  .hero {
+    padding-bottom: 40px;
+  }
 
   .hero-container {
     grid-template-columns: 1fr;
 
     text-align: center;
+
+    gap: 10px;
+  }
+
+  .hero-left {
+    margin-top: 60px;
+  }
+
+  .hero-left h1 {
+    margin: auto;
   }
 
   .hero-left p {
@@ -237,7 +300,16 @@
   }
 
   .hero-right {
-    margin-top: 30px;
+    margin-top: 10px;
+  }
+
+  .hero-image-box {
+    height: 400px;
+  }
+
+  .mail-box {
+    top: 40px;
+    right: 40px;
   }
 
   .social-sidebar {
@@ -246,43 +318,109 @@
 
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
 
   .hero {
-    padding-top: 85px;
+    min-height: auto;
+
+    padding-top: 75px;
+    padding-bottom: 35px;
   }
 
   .hero-container {
     padding: 0 20px;
   }
 
+  .hero-left {
+    margin-top: 20px;
+  }
+
   .hero-left h1 {
-    font-size: 42px;
+    font-size: 38px;
+
+    line-height: 1.15;
 
     letter-spacing: -1px;
   }
 
   .hero-left p {
-    font-size: 17px;
+    margin-top: 20px;
+
+    font-size: 16px;
     line-height: 1.6;
   }
 
   .hero-btn {
-    width: 150px;
-    height: 46px;
+    width: 145px;
+    height: 44px;
 
     font-size: 14px;
+
+    margin-top: 24px;
   }
 
   .hero-image-box {
-    height: 380px;
+    height: 320px;
+  }
+
+  .hero-image-box img {
+    max-width: 100%;
   }
 
   .mail-box {
-    font-size: 48px;
+    font-size: 42px;
 
     right: 0;
-    top: 70px;
+    top: 40px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero-container {
+    padding: 0 16px;
+  }
+
+  .hero-left h1 {
+    font-size: 32px;
+
+    line-height: 1.2;
+  }
+
+  .hero-left p {
+    font-size: 15px;
+
+    line-height: 1.5;
+  }
+
+  .hero-btn {
+    width: 135px;
+    height: 42px;
+
+    font-size: 13px;
+  }
+
+  .hero-image-box {
+    height: 260px;
+  }
+
+  .mail-box {
+    font-size: 34px;
+
+    top: 20px;
   }
 
 }

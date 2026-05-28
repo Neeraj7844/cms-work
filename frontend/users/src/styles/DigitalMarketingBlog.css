@@ -1,0 +1,355 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#f3f3f3;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.marketing-blog{
+width:100%;
+height:52vh;
+
+background-image:
+linear-gradient(
+rgba(74,95,57,0.72),
+rgba(74,95,57,0.72)
+),
+url("/digital-marketing.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.marketing-overlay{
+width:100%;
+height:100%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:20px;
+}
+
+.marketing-content{
+width:100%;
+max-width:1200px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+}
+
+.marketing-content h1{
+color:#fff;
+
+font-size:34px;
+font-weight:900;
+
+line-height:1.2;
+
+text-transform:uppercase;
+
+font-family:
+Impact,
+Haettenschweiler,
+'Arial Narrow Bold',
+sans-serif;
+
+max-width:900px;
+}
+
+/* SECTION */
+
+.marketing-details-section{
+width:100%;
+padding:70px 14%;
+background:#f3f3f3;
+}
+
+/* LAYOUT */
+
+.marketing-details-container{
+width:100%;
+max-width:1400px;
+
+margin:auto;
+
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+
+gap:55px;
+}
+
+/* LEFT */
+
+.marketing-left{
+flex:1;
+max-width:760px;
+}
+
+/* IMAGE */
+
+.marketing-main-image{
+width:100%;
+overflow:hidden;
+
+margin-bottom:25px;
+}
+
+.marketing-main-image img{
+width:100%;
+display:block;
+object-fit:cover;
+}
+
+/* META */
+
+.marketing-meta{
+display:flex;
+align-items:center;
+gap:28px;
+
+padding:16px 0;
+}
+
+.meta-item{
+display:flex;
+align-items:center;
+gap:8px;
+
+font-size:10px;
+font-weight:700;
+
+color:#111;
+
+font-family:
+Impact,
+Haettenschweiler,
+'Arial Narrow Bold',
+sans-serif;
+}
+
+.meta-icon{
+font-size:15px;
+}
+
+/* LINE */
+
+.marketing-line{
+width:100%;
+height:1px;
+
+background:#8d8d8d;
+
+margin-bottom:30px;
+
+position:relative;
+}
+
+.marketing-line::before{
+content:"";
+
+position:absolute;
+left:0;
+top:-1px;
+
+width:40px;
+height:3px;
+
+background:#76d64b;
+}
+
+/* TEXT */
+
+.marketing-text,
+.marketing-extra-content{
+width:100%;
+text-align:left;
+}
+
+.marketing-text p,
+.marketing-extra-content p{
+font-size:15px;
+line-height:2;
+
+color:#111;
+
+margin-bottom:24px;
+}
+
+/* HEADINGS */
+
+.marketing-extra-content h2{
+font-size:26px;
+font-weight:900;
+
+color:#445b46;
+
+margin-top:45px;
+margin-bottom:22px;
+
+line-height:1.3;
+
+text-transform:uppercase;
+
+font-family:
+Impact,
+Haettenschweiler,
+'Arial Narrow Bold',
+sans-serif;
+}
+
+/* LIST */
+
+.marketing-extra-content ul,
+.marketing-extra-content ol{
+padding-left:24px;
+margin-bottom:28px;
+}
+
+.marketing-extra-content ul li,
+.marketing-extra-content ol li{
+font-size:15px;
+line-height:2.1;
+
+margin-bottom:10px;
+}
+
+/* SIDEBAR */
+
+.marketing-sidebar{
+width:260px;
+
+display:flex;
+flex-direction:column;
+gap:24px;
+}
+
+/* BOX */
+
+.sidebar-box{
+background:#1d1d1d;
+
+padding:26px 18px;
+
+color:#fff;
+}
+
+/* TITLE */
+
+.sidebar-box h3{
+font-size:24px;
+font-weight:700;
+
+font-family:
+Impact,
+Haettenschweiler,
+'Arial Narrow Bold',
+sans-serif;
+}
+
+/* GREEN LINE */
+
+.green-line{
+width:36px;
+height:4px;
+
+background:#76d64b;
+
+margin:16px 0 22px;
+}
+
+/* LIST */
+
+.sidebar-box ul{
+list-style:none;
+padding-left:0;
+}
+
+.sidebar-box ul li{
+padding:15px 0;
+
+font-size:13px;
+line-height:1.8;
+
+border-bottom:
+1px solid rgba(255,255,255,0.08);
+}
+
+/* CATEGORY */
+
+.category-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:15px 0;
+
+border-bottom:
+1px solid rgba(255,255,255,0.08);
+}
+
+.category-item span{
+font-size:14px;
+font-weight:600;
+}
+
+.category-item button{
+width:24px;
+height:24px;
+
+border:none;
+outline:none;
+
+background:#000;
+color:#fff;
+
+font-size:11px;
+font-weight:700;
+}
+
+/* MOBILE */
+
+@media(max-width:992px){
+
+.marketing-details-container{
+flex-direction:column;
+}
+
+.marketing-sidebar{
+width:100%;
+}
+
+}
+
+@media(max-width:768px){
+
+.marketing-blog{
+height:36vh;
+}
+
+.marketing-content h1{
+font-size:28px;
+line-height:1.3;
+}
+
+.marketing-details-section{
+padding:50px 5%;
+}
+
+}

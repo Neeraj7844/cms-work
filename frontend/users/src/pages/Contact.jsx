@@ -60,7 +60,7 @@ const Contact = () => {
     try {
 
       const res = await axios.post(
-        "https://cms-3tty.onrender.com/api/form/create",
+        "http://localhost:5000/api/form/create",
         formData
       );
 
@@ -408,7 +408,102 @@ const Contact = () => {
       </section>
 
 
+{/* ================= BRANDS SECTION ================= */}
 
+<section className="contact-brands-section">
+
+  <div className="contact-brands-container">
+
+    {/* TOP LINE */}
+
+    <div className="contact-brands-line"></div>
+
+    {/* CONTENT */}
+
+    <div className="contact-brands-content">
+
+      {/* LEFT */}
+
+      <div className="contact-brands-left">
+
+        <div className="contact-green-shape"></div>
+
+        <h2>
+          BRANDS WE'VE
+          COLLABORATED
+          
+          WITH TEAM.
+        </h2>
+
+      </div>
+
+      {/* RIGHT LOGOS */}
+
+      <div className="contact-brands-grid">
+
+        <div className="brand-item">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
+            alt=""
+          />
+        </div>
+
+        <div className="brand-item">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
+            alt=""
+          />
+        </div>
+
+        <div className="brand-item">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
+            alt=""
+          />
+        </div>
+
+        <div className="brand-item">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"
+            alt=""
+          />
+        </div>
+
+        <div className="brand-item">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968875.png"
+            alt=""
+          />
+        </div>
+
+        <div className="brand-item">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+            alt=""
+          />
+        </div>
+
+        <div className="brand-item">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png"
+            alt=""
+          />
+        </div>
+
+        <div className="brand-item">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968946.png"
+            alt=""
+          />
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
       <Footer />
 
     </>

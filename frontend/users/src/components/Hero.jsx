@@ -2,11 +2,9 @@ import React, {
   useEffect,
   useState,
 } from "react";
-
 import axios from "axios";
-
+import herimg from "../assets/images/herimg.png";
 import "../styles/hero.css";
-
 const Hero = () => {
 
   const [heroData, setHeroData] =
@@ -33,7 +31,7 @@ const Hero = () => {
         const res =
           await axios.get(
 
-            "https://cms-3tty.onrender.com/api/hero"
+            "http://localhost:5000/api/hero"
 
           );
 
@@ -131,27 +129,29 @@ const Hero = () => {
 
           </p>
 
-          <button className="hero-btn">
+        <button
+            className="hero-btn"
+            onClick={() => window.open("/contact", "_blank")}
+          >
             Get Started
-          </button>
+        </button>
 
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="hero-right">
+        <div className="hero-right" >
 
           <div className="hero-image-box">
 
-            {/* IMAGE */}
+            <img className="mail-box"
+              src={herimg}
+              alt="Hero"
+            />
 
           </div>
 
-          <div className="mail-box">
-            ✉️
-          </div>
 
-        </div>
-
+</div>
       </div>
 
     </section>

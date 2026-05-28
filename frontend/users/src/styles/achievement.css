@@ -1,24 +1,27 @@
-/* =========================
+/* =========================================
    ACHIEVEMENT SECTION
-========================= */
-.ne{
-  display: flex;
-  justify-content: center;
-  gap:12px;
-  margin-left: 160px;
-}
+========================================= */
+
 .achievement-section {
 
   width: 100%;
 
-  max-width: 1400px;
-
-  margin: 0 auto;
-
   background: #f7f7f7;
 
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding: 72px 90px;
+
+  overflow: hidden;
+}
+
+/* MAIN FLEX */
+
+.ne {
+
+  width: 100%;
+
+  max-width: 1450px;
+
+  margin: auto;
 
   display: flex;
 
@@ -26,14 +29,12 @@
 
   align-items: center;
 
-  gap: 40px;
-
-  overflow: hidden;
+  gap: 70px;
 }
 
-/* =========================
+/* =========================================
    LEFT SIDE
-========================= */
+========================================= */
 
 .achievement-left {
 
@@ -43,87 +44,74 @@
 
   flex-direction: column;
 
-  overflow: hidden;
+  align-items: flex-start;
+
+  text-align: left;
 }
 
-/* =========================
-   TAG
-========================= */
+/* TAG */
 
 .achievement-tag {
 
-  width: 125px;
+  padding: 13px 34px;
 
-  height: 36px;
+  border-radius: 10px;
 
-  border-radius: 6px;
-
-  background: linear-gradient(to right, #d9f6f9, #d7d8ff);
+  background:
+  linear-gradient(
+    to right,
+    #d9f6f9,
+    #d7d8ff
+  );
 
   color: #1565ff;
 
-  font-size: 13px;
+  font-size: 17px;
 
   font-weight: 700;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
 }
 
-/* =========================
-   HEADING
-========================= */
+/* HEADING */
 
 .achievement-left h2 {
 
-  margin-top: 16px;
+  margin-top: 24px;
 
-  font-size: 36px;
+  font-size: 40px;
 
-  line-height: 1.25;
+  line-height: 1.16;
 
   font-weight: 800;
 
   color: #5d7659;
 
-  width: 100%;
+  max-width: 620px;
 
-  max-width: 480px;
+  text-align: left;
 
-  overflow-wrap: break-word;
-
-  word-break: break-word;
+  letter-spacing: -1px;
 }
 
-/* =========================
-   PARAGRAPH
-========================= */
+/* PARAGRAPH */
 
 .achievement-left p {
 
-  margin-top: 18px;
+  margin-top: 30px;
 
-  font-size: 13px;
+  font-size: 15px;
 
   line-height: 1.8;
 
   color: #222;
 
-  width: 100%;
+  max-width: 650px;
 
-  max-width: 480px;
-
-  overflow-wrap: break-word;
-
-  word-break: break-word;
+  text-align: left;
 }
 
-/* =========================
+/* =========================================
    RIGHT SIDE
-========================= */
+========================================= */
 
 .achievement-right {
 
@@ -135,24 +123,22 @@
 
   align-items: center;
 
-  gap: 16px;
-
-  overflow: hidden;
+  gap: 26px;
 }
 
-/* =========================
+/* =========================================
    CARD
-========================= */
+========================================= */
 
 .achievement-card {
 
-  width: 135px;
+  width: 172px;
 
-  height: 195px;
+  height: 245px;
 
-  background: #fff;
+  background: white;
 
-  border-radius: 7px;
+  border-radius: 16px;
 
   display: flex;
 
@@ -162,27 +148,26 @@
 
   justify-content: center;
 
-  flex-shrink: 0;
-
-  box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+  box-shadow:
+  0 8px 28px
+  rgba(0,0,0,0.04);
 
   transition: 0.3s ease;
 }
 
 .achievement-card:hover {
 
-  transform: translateY(-5px);
+  transform:
+  translateY(-6px);
 }
 
-/* =========================
-   ICON
-========================= */
+/* ICON */
 
 .achievement-icon {
 
-  width: 58px;
+  width: 70px;
 
-  height: 58px;
+  height: 70px;
 
   border-radius: 50%;
 
@@ -192,50 +177,46 @@
 
   justify-content: center;
 
-  font-size: 24px;
+  overflow: hidden;
 
-  color: #fff;
+  font-size: 28px;
+
+  color: white;
 }
 
-.pink {
+/* IMAGE */
 
-  background: linear-gradient(135deg, #ff9966, #ff3366);
+.achievement-image {
+
+  width: 34px;
+
+  height: 34px;
+
+  object-fit: contain;
 }
 
-.blue {
-
-  background: linear-gradient(135deg, #33ccff, #003cff);
-}
-
-.purple {
-
-  background: linear-gradient(135deg, #d91cff, #7a2cff);
-}
-
-/* =========================
-   NUMBER
-========================= */
+/* NUMBER */
 
 .achievement-card h3 {
 
-  margin-top: 18px;
+  margin-top: 22px;
 
-  font-size: 32px;
+  font-size: 48px;
 
   font-weight: 800;
 
   color: #08145f;
+
+  line-height: 1;
 }
 
-/* =========================
-   TEXT
-========================= */
+/* TEXT */
 
 .achievement-card span {
 
-  margin-top: 6px;
+  margin-top: 12px;
 
-  font-size: 12px;
+  font-size: 16px;
 
   font-weight: 700;
 
@@ -245,26 +226,21 @@
 
   line-height: 1.5;
 
-  padding: 0 8px;
+  padding: 0 10px;
 }
 
-/* =========================
+/* =========================================
    RESPONSIVE
-========================= */
+========================================= */
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
 
   .achievement-section {
 
-    padding-left: 30px;
-
-    padding-right: 30px;
+    padding: 60px 40px;
   }
-}
 
-@media (max-width: 1100px) {
-
-  .achievement-section {
+  .ne {
 
     flex-direction: column;
 
@@ -283,33 +259,35 @@
 
     flex-wrap: wrap;
 
-    margin-top: 25px;
+    margin-top: 35px;
   }
+
 }
 
 @media (max-width: 768px) {
 
   .achievement-section {
 
-    padding-left: 18px;
+    padding: 50px 18px;
+  }
 
-    padding-right: 18px;
+  .achievement-tag {
 
-    padding-top: 45px;
+    font-size: 15px;
 
-    padding-bottom: 45px;
+    padding: 10px 22px;
   }
 
   .achievement-left h2 {
 
-    font-size: 28px;
+    font-size: 40px;
 
     max-width: 100%;
   }
 
   .achievement-left p {
 
-    font-size: 12px;
+    font-size: 16px;
 
     max-width: 100%;
   }
@@ -318,27 +296,37 @@
 
     justify-content: center;
 
-    gap: 12px;
+    gap: 16px;
   }
 
   .achievement-card {
 
-    width: 125px;
+    width: 145px;
 
-    height: 180px;
+    height: 210px;
   }
 
   .achievement-card h3 {
 
-    font-size: 28px;
+    font-size: 36px;
   }
+
+  .achievement-card span {
+
+    font-size: 14px;
+  }
+
 }
 
-/* =========================
+/* =========================================
    BODY FIX
-========================= */
+========================================= */
 
-body{
+body {
+
+  margin: 0;
+
+  padding: 0;
 
   overflow-x: hidden;
 }

@@ -58,7 +58,11 @@ const Sidebar = () => {
             Features CMS
           </Link>
         </li>
-
+        <li>
+          <Link to="/admin/neab">
+            Neab Section
+          </Link>
+        </li>
         <li>
           <Link to="/achievement">
             Achievement CMS

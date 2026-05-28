@@ -1,132 +1,240 @@
-import React from "react";
+import React,{
+useEffect,
+useState
+} from "react";
+
+import axios from "axios";
+
 import "../styles/blog.css";
 
 const BlogSection = () => {
-  return (
-    <section className="blog-section">
 
-      {/* TAG */}
-      <div className="blog-tag">
-        Our Blog
-      </div>
+const [blogData,setBlogData]=
+useState({
 
-      {/* HEADING */}
-      <h2>
-        Latest News & Articles
-      </h2>
+heading:"",
+paragraph:"",
+blogs:[]
 
-      {/* DESCRIPTION */}
-      <p className="blog-desc">
-        Follow our latest news and thoughts which focuses exclusively
-        on design, art, vintage, and also work updates.
-      </p>
+});
 
-      {/* BLOG CARDS */}
+useEffect(()=>{
 
-      <div className="blog-cards">
+fetchBlogs();
 
-        {/* CARD 1 */}
+},[]);
 
-        <div className="blog-card">
+const fetchBlogs=
+async()=>{
 
-          {/* IMAGE */}
-          <div className="blog-image blog-img-1">
-            {/* IMAGE YAHAN ADD KRNA */}
-          </div>
+try{
 
-          {/* CONTENT */}
-          <div className="blog-content">
+const res=
+await axios.get(
+"http://localhost:5000/api/blog"
+);
 
-            <div className="blog-category blue">
-              Brand Identity
-            </div>
+if(res.data){
 
-            <div className="blog-date">
-              📅 August 25, 2025
-            </div>
+setBlogData(res.data);
 
-            <h3>
-              How to Build a
-              Memorable Brand
-              Identity Online.
-            </h3>
+}
 
-            <button className="blog-btn blue-btn">
-              »
-            </button>
+}catch(error){
 
-          </div>
+console.log(error);
 
-        </div>
+}
 
-        {/* CARD 2 */}
+};
 
-        <div className="blog-card">
+/* BRAND PAGE */
 
-          <div className="blog-image blog-img-2">
-            {/* IMAGE YAHAN ADD KRNA */}
-          </div>
+const openBrandPage=()=>{
 
-          <div className="blog-content">
+window.open(
+"/brand-identity-blog",
+"_blank"
+);
 
-            <div className="blog-category pink">
-              Design, Digital
-            </div>
+};
 
-            <div className="blog-date">
-              📅 August 21, 2025
-            </div>
+/* DESIGN PAGE */
 
-            <h3>
-              The Power of User-
-              Centric Thinking
-              in Modern Design
-            </h3>
+const openDesignPage=()=>{
 
-            <button className="blog-btn pink-btn">
-              »
-            </button>
+window.open(
+"/design-digital-blog",
+"_blank"
+);
 
-          </div>
+};
 
-        </div>
+/* MARKETING PAGE */
 
-        {/* CARD 3 */}
+const openMarketingPage=()=>{
 
-        <div className="blog-card third-card">
+window.open(
+"/digital-marketing-blog",
+"_blank"
+);
 
-          <div className="blog-image blog-img-3">
-            {/* IMAGE YAHAN ADD KRNA */}
-          </div>
+};
 
-          <div className="blog-content">
+return (
 
-            <div className="blog-category green">
-              Digital, Marketing
-            </div>
+<section className="blog-section">
 
-            <div className="blog-date">
-              📅 May 26, 2021
-            </div>
+<div className="blog-tag">
+Our Blog
+</div>
 
-            <h3>
-              How to be more
-              productive usgin
-              sticky notes.
-            </h3>
+<h2>
 
-            <button className="blog-btn green-btn">
-              »
-            </button>
+{
+blogData.heading ||
+"Latest News & Articles"
+}
 
-          </div>
+</h2>
 
-        </div>
+<p className="blog-desc">
 
-      </div>
+{
+blogData.paragraph ||
+"Follow our latest news and thoughts which focuses exclusively on design, art, vintage, and also work updates."
+}
 
-    </section>
-  );
+</p>
+
+<div className="blog-cards">
+
+{/* CARD 1 */}
+
+<div className="blog-card">
+
+<div className="blog-image">
+
+<img
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200"
+alt=""
+/>
+
+</div>
+
+<div className="blog-content">
+
+<div className="blog-category blue">
+Brand Identity
+</div>
+
+<div className="blog-date">
+📅 May 28, 2026
+</div>
+
+<h3>
+How to Build a
+Memorable Brand
+Identity Online.
+</h3>
+
+<button
+className="blog-btn blue-btn"
+onClick={openBrandPage}
+>
+»
+</button>
+
+</div>
+
+</div>
+
+{/* CARD 2 */}
+
+<div className="blog-card">
+
+<div className="blog-image">
+
+<img
+src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1200"
+alt=""
+/>
+
+</div>
+
+<div className="blog-content">
+
+<div className="blog-category pink">
+Design, Digital
+</div>
+
+<div className="blog-date">
+📅 May 28, 2026
+</div>
+
+<h3>
+The Power of User-
+Centric Thinking
+in Modern Design
+</h3>
+
+<button
+className="blog-btn pink-btn"
+onClick={openDesignPage}
+>
+»
+</button>
+
+</div>
+
+</div>
+
+{/* CARD 3 */}
+
+<div className="blog-card">
+
+<div className="blog-image">
+
+<img
+src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200"
+alt=""
+/>
+
+</div>
+
+<div className="blog-content">
+
+<div className="blog-category green">
+Digital, Marketing
+</div>
+
+<div className="blog-date">
+📅 May 26, 2021
+</div>
+
+<h3>
+How to be more
+productive using
+sticky notes.
+</h3>
+
+<button
+className="blog-btn green-btn"
+onClick={openMarketingPage}
+>
+»
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+);
+
 };
 
 export default BlogSection;
