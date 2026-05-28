@@ -81,7 +81,7 @@ async(req,res)=>{
         req.files[name][0]
       ){
 
-        return `http://localhost:5000/uploads/${req.files[name][0].filename}`;
+        return `https://cms-3tty.onrender.com/uploads/${req.files[name][0].filename}`;
       }
 
       return "";

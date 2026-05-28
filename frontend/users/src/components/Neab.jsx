@@ -67,7 +67,7 @@ const Neab = () => {
         const res =
           await axios.get(
 
-            "http://localhost:5000/api/neab"
+            "https://cms-3tty.onrender.com/api/neab"
 
           );
 

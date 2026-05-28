@@ -36,7 +36,7 @@ const AdminService = () => {
       const res =
         await axios.get(
 
-          "http://localhost:5000/api/service"
+          "https://cms-3tty.onrender.com/api/service"
 
         );
 
@@ -167,7 +167,7 @@ const AdminService = () => {
 
       await axios.put(
 
-        "http://localhost:5000/api/service",
+        "https://cms-3tty.onrender.com/api/service",
 
         data
 

@@ -48,7 +48,7 @@ const AdminHero = () => {
 
       const res =
         await axios.get(
-          "http://localhost:5000/api/hero"
+          "https://cms-3tty.onrender.com/api/hero"
         );
 
       if (res.data) {
@@ -105,7 +105,7 @@ const AdminHero = () => {
 
       await axios.put(
 
-        "http://localhost:5000/api/hero",
+        "https://cms-3tty.onrender.com/api/hero",
 
         {
 

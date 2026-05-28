@@ -68,7 +68,7 @@ try{
 
 const res=await axios.get(
 
-"http://localhost:5000/api/about"
+"/api/about"
 
 );
 
@@ -154,7 +154,7 @@ missionImageFile
 
 await axios.put(
 
-"http://localhost:5000/api/about",
+"https://cms-3tty.onrender.com/api/api/about",
 
 formData,
 
