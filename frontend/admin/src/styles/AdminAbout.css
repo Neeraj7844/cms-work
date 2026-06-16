@@ -8,17 +8,27 @@
   box-sizing:border-box;
 }
 
+html,
 body{
+  width:100%;
+  overflow-x:hidden;
   background:#eef2ff;
   font-family:"Poppins",sans-serif;
 }
 
-/* MAIN PAGE */
+/* LAYOUT */
+
+.admin-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+/* MAIN CONTENT */
 
 .admin-about{
-  width:100%;
+  flex:1;
+  margin-left:290px; /* same as sidebar width */
   min-height:100vh;
-
   padding:40px;
 
   background:
@@ -27,19 +37,17 @@ body{
     #f8fafc 0%,
     #eef2ff 100%
   );
+
+  overflow-x:hidden;
 }
 
 /* PAGE TITLE */
 
 .admin-page-title{
   font-size:46px;
-
   font-weight:800;
-
   color:#0f172a;
-
   margin-bottom:35px;
-
   letter-spacing:-1px;
 }
 
@@ -47,11 +55,8 @@ body{
 
 .cms-section{
   background:#ffffff;
-
   padding:35px;
-
   border-radius:30px;
-
   margin-bottom:35px;
 
   border:
@@ -59,15 +64,16 @@ body{
 
   box-shadow:
   0 15px 45px rgba(15,23,42,0.07);
+
+  width:100%;
+  overflow:hidden;
 }
 
 /* SECTION TITLE */
 
 .cms-section h2{
   font-size:30px;
-
   font-weight:700;
-
   color:#0f172a;
 
   margin-bottom:28px;
@@ -76,8 +82,6 @@ body{
 
   padding-left:18px;
 }
-
-/* BLUE LINE */
 
 .cms-section h2::before{
   content:"";
@@ -106,34 +110,33 @@ body{
   display:grid;
 
   grid-template-columns:
-  repeat(auto-fit,minmax(320px,1fr));
+  repeat(auto-fit,minmax(280px,1fr));
 
   gap:24px;
+
+  width:100%;
 }
 
 /* FIELD */
 
 .cms-field{
   display:flex;
-
   flex-direction:column;
-
   gap:12px;
+
+  min-width:0;
 }
 
 /* LABEL */
 
 .cms-field label{
   color:#334155;
-
   font-size:15px;
-
   font-weight:700;
-
   letter-spacing:0.3px;
 }
 
-/* INPUT */
+/* INPUTS */
 
 .cms-field input,
 .cms-field textarea,
@@ -158,15 +161,10 @@ body{
   transition:0.3s ease;
 }
 
-/* TEXTAREA */
-
 .cms-field textarea{
   min-height:130px;
-
   resize:vertical;
 }
-
-/* FOCUS */
 
 .cms-field input:focus,
 .cms-field textarea:focus,
@@ -179,26 +177,16 @@ body{
   0 0 0 5px rgba(59,130,246,0.12);
 }
 
-/* PLACEHOLDER */
-
 .cms-field input::placeholder,
 .cms-field textarea::placeholder{
   color:#94a3b8;
 }
 
-/* COLOR INPUT */
-
 .cms-field input[type="color"]{
   height:65px;
-
   padding:6px;
-
   cursor:pointer;
-
-  overflow:hidden;
 }
-
-/* SELECT */
 
 .cms-field select{
   cursor:pointer;
@@ -233,8 +221,6 @@ body{
   margin-top:15px;
 }
 
-/* BUTTON HOVER */
-
 .update-btn:hover{
   transform:translateY(-3px);
 
@@ -242,29 +228,70 @@ body{
   0 18px 35px rgba(37,99,235,0.25);
 }
 
-/* RESPONSIVE */
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+  .admin-about{
+    margin-left:290px;
+    padding:25px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:768px){
 
+  .admin-layout{
+    display:block;
+  }
+
   .admin-about{
-    padding:20px;
+    margin-left:0;
+    width:100%;
+    max-width:100%;
+    padding:15px;
   }
 
   .admin-page-title{
-    font-size:34px;
+    font-size:30px;
+    margin-bottom:20px;
   }
 
   .cms-section{
-    padding:22px;
-    border-radius:24px;
+    padding:18px;
+    border-radius:20px;
   }
 
   .cms-section h2{
-    font-size:24px;
+    font-size:22px;
+    margin-bottom:20px;
   }
 
   .cms-grid{
     grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .cms-field{
+    width:100%;
+  }
+
+  .cms-field input,
+  .cms-field textarea,
+  .cms-field select{
+    padding:14px;
+    font-size:14px;
+  }
+
+  .update-btn{
+    width:100%;
+    padding:16px;
   }
 
 }

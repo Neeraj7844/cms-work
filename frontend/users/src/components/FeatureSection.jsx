@@ -35,7 +35,7 @@ const FeatureSection = () => {
         const res =
           await axios.get(
 
-            "https://cms-3tty.onrender.com/api/feature"
+            "http://localhost:5000/api/feature"
 
           );
 

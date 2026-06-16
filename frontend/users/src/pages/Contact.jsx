@@ -60,7 +60,7 @@ const Contact = () => {
     try {
 
       const res = await axios.post(
-        "https://cms-3tty.onrender.com/api/form/create",
+        "http://localhost:5000/api/form/create",
         formData
       );
 

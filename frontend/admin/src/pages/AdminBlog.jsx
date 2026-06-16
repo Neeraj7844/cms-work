@@ -88,7 +88,7 @@ files[key]
 
 await axios.post(
 
-"https://cms-3tty.onrender.com/api/blog",
+"http://localhost:5000/api/blog",
 data
 
 );

@@ -6,7 +6,7 @@ useState,
 import axios from "axios";
 
 import "../styles/progressAdmin.css";
-
+import Sidebar from "../components/Sidebar";
 const AdminProgress=()=>{
 
 const [data,setData]=useState({
@@ -36,7 +36,7 @@ const fetchProgress=async()=>{
 try{
 
 const res=await axios.get(
-"https://cms-3tty.onrender.com/api/progress"
+"http://localhost:5000/api/progress"
 );
 
 if(res.data){
@@ -112,7 +112,7 @@ const updateProgress=async()=>{
 try{
 
 await axios.put(
-"https://cms-3tty.onrender.com/api/progress",
+"http://localhost:5000/api/progress",
 data
 );
 
@@ -129,7 +129,7 @@ console.log(error);
 return(
 
 <div className="progress-admin-page">
-
+     <Sidebar />
 <div className="progress-admin-container">
 
 <h1>

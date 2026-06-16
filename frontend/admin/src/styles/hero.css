@@ -1,7 +1,24 @@
 /* =========================
    PREMIUM HERO CMS UI
 ========================= */
+.hero-admin-layout{
+  display:flex;
+}
 
+.hero-admin-page{
+  flex:1;
+  margin-left:290px;
+  padding:40px;
+}
+
+@media(max-width:768px){
+
+  .hero-admin-page{
+    margin-left:0;
+    padding:20px;
+  }
+
+}
 *{
   margin:0;
   padding:0;

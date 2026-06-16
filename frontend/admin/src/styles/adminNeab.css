@@ -1,198 +1,278 @@
 /* ========================================
-   ADMIN NEAB
+   ADMIN NEAB PREMIUM UI
 ======================================== */
 
-.admin-neab {
-  width: 100%;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-  min-height: 100vh;
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
 
-  background: #f4f7f2;
+  background:
+  linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #eef2ff 100%
+  );
 
-  padding: 40px;
+  font-family:"Poppins",sans-serif;
+}
+
+/* LAYOUT */
+
+.feature-admin-layout{
+  display:flex;
+}
+
+/* PAGE */
+
+.admin-neab-page{
+  flex:1;
+
+  margin-left:290px;
+
+  min-height:100vh;
+
+  padding:40px;
+}
+
+/* MAIN CONTAINER */
+
+.admin-neab-container{
+  width:100%;
+
+  background:#ffffff;
+
+  border-radius:30px;
+
+  padding:40px;
+
+  border:
+  1px solid rgba(226,232,240,0.9);
+
+  box-shadow:
+  0 15px 40px rgba(15,23,42,0.08);
 }
 
 /* TITLE */
 
-.admin-neab-title {
-  font-size: 42px;
+.admin-neab-title{
+  font-size:42px;
 
-  color: #36543b;
+  font-weight:800;
 
-  font-weight: 800;
+  color:#0f172a;
 
-  margin-bottom: 35px;
+  margin-bottom:35px;
+
+  position:relative;
+
+  padding-left:18px;
+}
+
+.admin-neab-title::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:5px;
+
+  width:6px;
+  height:42px;
+
+  border-radius:30px;
+
+  background:
+  linear-gradient(
+    180deg,
+    #2563eb,
+    #60a5fa
+  );
 }
 
 /* FORM */
 
-.admin-neab form {
-  width: 100%;
-
-  max-width: 1100px;
-
-  background: white;
-
-  padding: 40px;
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 25px;
+.admin-neab-container form{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
 }
 
 /* LABEL */
 
-.admin-neab label {
-  font-size: 17px;
+.admin-neab-container label{
+  display:block;
 
-  font-weight: 700;
+  font-size:15px;
 
-  color: #2c2c2c;
+  font-weight:700;
 
-  margin-bottom: 8px;
+  color:#334155;
 
-  display: block;
+  margin-bottom:8px;
 }
 
 /* INPUT */
 
-.admin-neab input,
-.admin-neab textarea {
-  width: 100%;
+.admin-neab-container input,
+.admin-neab-container textarea{
+  width:100%;
 
-  border: 1px solid #d8d8d8;
+  background:#f8fafc;
 
-  border-radius: 10px;
+  border:
+  1px solid #dbe4ee;
 
-  padding: 16px 18px;
+  border-radius:18px;
 
-  font-size: 16px;
+  padding:17px 18px;
 
-  outline: none;
+  font-size:15px;
 
-  transition: 0.3s ease;
+  color:#0f172a;
 
-  background: #fafafa;
+  outline:none;
+
+  transition:0.3s ease;
 }
 
 /* TEXTAREA */
 
-.admin-neab textarea {
-  min-height: 140px;
-
-  resize: vertical;
+.admin-neab-container textarea{
+  min-height:140px;
+  resize:vertical;
 }
 
 /* FOCUS */
 
-.admin-neab input:focus,
-.admin-neab textarea:focus {
-  border-color: #5b7c5b;
+.admin-neab-container input:focus,
+.admin-neab-container textarea:focus{
+  background:#ffffff;
 
-  background: white;
+  border-color:#3b82f6;
 
-  box-shadow: 0 0 0 4px rgba(91,124,91,0.1);
+  box-shadow:
+  0 0 0 5px rgba(59,130,246,0.12);
 }
 
 /* FILE */
 
-.admin-neab input[type="file"] {
-  padding: 12px;
-
-  background: #f1f4ef;
-
-  cursor: pointer;
-}
-
-/* SECTION TITLE */
-
-.admin-section-title {
-  margin-top: 10px;
-
-  font-size: 28px;
-
-  color: #45604a;
-
-  font-weight: 800;
-
-  border-bottom: 2px solid #e4e4e4;
-
-  padding-bottom: 10px;
+.admin-neab-container input[type="file"]{
+  cursor:pointer;
 }
 
 /* CARD BOX */
 
-.admin-card-box {
-  width: 100%;
+.admin-card-box{
+  background:#f8fafc;
 
-  background: #f9faf8;
+  border:
+  1px solid #dbe4ee;
 
-  border: 1px solid #ececec;
+  border-radius:24px;
 
-  border-radius: 16px;
+  padding:28px;
 
-  padding: 25px;
+  margin-top:10px;
+
+  box-shadow:
+  0 8px 25px rgba(15,23,42,0.05);
+}
+
+/* SECTION TITLE */
+
+.admin-section-title{
+  font-size:24px;
+
+  font-weight:700;
+
+  color:#0f172a;
+
+  margin-bottom:20px;
 }
 
 /* BUTTON */
 
-.admin-neab button {
-  width: 220px;
-  height: 58px;
+.admin-neab-container button{
+  border:none;
 
-  border: none;
-
-  border-radius: 10px;
-
-  background: linear-gradient(
-    to right,
-    #3f5c42,
-    #6d9b71
+  background:
+  linear-gradient(
+    90deg,
+    #2563eb,
+    #3b82f6
   );
 
-  color: white;
+  color:#fff;
 
-  font-size: 18px;
-  font-weight: 700;
+  padding:16px 30px;
 
-  cursor: pointer;
+  border-radius:18px;
 
-  transition: 0.3s ease;
+  font-size:15px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+
+  margin-top:10px;
+
+  width:220px;
 }
 
-.admin-neab button:hover {
-  transform: translateY(-3px);
+.admin-neab-container button:hover{
+  transform:translateY(-3px);
 
-  opacity: 0.95;
+  box-shadow:
+  0 18px 35px rgba(37,99,235,0.25);
 }
 
-/* RESPONSIVE */
+/* TABLET */
 
-@media (max-width: 768px) {
+@media(max-width:992px){
 
-  .admin-neab {
-    padding: 18px;
+  .admin-neab-page{
+    padding:25px;
   }
 
-  .admin-neab form {
-    padding: 20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .feature-admin-layout{
+    display:block;
   }
 
-  .admin-neab-title {
-    font-size: 28px;
+  .admin-neab-page{
+    margin-left:0;
+    padding:15px;
   }
 
-  .admin-section-title {
-    font-size: 22px;
+  .admin-neab-container{
+    padding:22px;
+    border-radius:24px;
   }
 
-  .admin-neab button {
-    width: 100%;
+  .admin-neab-title{
+    font-size:32px;
+  }
+
+  .admin-section-title{
+    font-size:22px;
+  }
+
+  .admin-neab-container button{
+    width:100%;
   }
 
 }

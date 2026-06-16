@@ -2,9 +2,9 @@ import React,{
 useEffect,
 useState,
 } from "react";
-
+import "../styles/AdminProject.css";
 import axios from "axios";
-
+import Sidebar from "../components/Sidebar";
 const AdminProject=()=>{
 
 const [data,setData]=useState({
@@ -22,7 +22,7 @@ const fetchProject=async()=>{
 try{
 
 const res=await axios.get(
-"https://cms-3tty.onrender.com/api/project"
+"http://localhost:5000/api/project"
 );
 
 if(res.data){
@@ -101,7 +101,7 @@ const updateProject=async()=>{
 try{
 
 await axios.put(
-"https://cms-3tty.onrender.com/api/project",
+"http://localhost:5000/api/project",
 data
 );
 
@@ -117,10 +117,13 @@ console.log(error);
 
 return(
 
-<div style={{
-padding:"40px",
-}}>
+<div className="feature-admin-layout">
 
+  <Sidebar />
+
+  <div className="project-admin-page">
+
+    <div className="project-admin-container">
 <h1>
 Project CMS
 </h1>
@@ -339,7 +342,8 @@ onChange={handleChange}
 />
 
 </div>
-
+</div>
+</div>
 );
 
 };

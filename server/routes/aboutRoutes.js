@@ -47,21 +47,17 @@ getAbout
 /* UPDATE */
 
 router.put(
-
-"/",
-
-upload.fields([
-
-{ name:"heroBgFile" },
-
-{ name:"reasonsImageFile" },
-
-{ name:"missionImageFile" }
-
-]),
-
-updateAbout
-
+  "/",
+  upload.fields([
+    { name: "heroBgFile" },
+    { name: "reasonsImageFile" },
+    { name: "missionImageFile" }
+  ]),
+  (req, res, next) => {
+    console.log("FILES RECEIVED =>", req.files);
+    next();
+  },
+  updateAbout
 );
 
 export default router;

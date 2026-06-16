@@ -1,3 +1,3 @@
-const API = "https://cms-3tty.onrender.com";
+const API = "http://localhost:5000";
 
 export default API;

@@ -26,7 +26,7 @@ body{
 .admin-achievement-page{
   width:100%;
   min-height:100vh;
-
+    margin-left:260px;
   padding:40px;
 }
 
@@ -246,6 +246,7 @@ body{
 
   .admin-achievement-page{
     padding:20px;
+    margin-left: 0px;
   }
 
   .admin-achievement-container{

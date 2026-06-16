@@ -6,7 +6,7 @@ useState,
 import axios from "axios";
 
 import "../styles/testimonialAdmin.css";
-
+import Sidebar from "../components/Sidebar";
 const AdminTestimonial=()=>{
 
 const [data,setData]=useState({
@@ -37,7 +37,7 @@ const fetchData=async()=>{
 try{
 
 const res=await axios.get(
-"https://cms-3tty.onrender.com/api/testimonial"
+"http://localhost:5000/api/testimonial"
 );
 
 if(res.data){
@@ -114,7 +114,7 @@ const updateData=async()=>{
 try{
 
 await axios.put(
-"https://cms-3tty.onrender.com/api/testimonial",
+"http://localhost:5000/api/testimonial",
 data
 );
 
@@ -131,7 +131,7 @@ console.log(error);
 return(
 
 <div className="testimonial-admin-page">
-
+    <Sidebar />
 <div className="testimonial-admin-container">
 
 <h1>

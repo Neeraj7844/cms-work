@@ -44,7 +44,7 @@
 /* HEADING */
 
 .services-top h2 {
-  font-size: 40px; /* 30% smaller */
+  font-size: 33px; /* 30% smaller */
   line-height: 1.2;
   font-weight: 800;
 
@@ -59,7 +59,7 @@
   max-width: 760px;
   margin: auto;
 
-  font-size: 17px;
+  font-size: 14px;
   line-height: 1.8;
 
   color: #222;
@@ -73,7 +73,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 22px;
+  gap: 10px;
 }
 
 /* CARD */
@@ -88,7 +88,7 @@
   padding: 26px 18px;
 
   height: 260px; /* 30% smaller */
-
+  width: 75%;
   text-align: center;
 
   overflow: hidden;
@@ -116,7 +116,7 @@
   top: 14px;
   left: 14px;
 
-  font-size: 42px;
+  font-size: 20px;
   font-weight: 800;
 
   color: #e2e2e8;
@@ -292,6 +292,7 @@
   .service-card {
     height: auto;
     min-height: 250px;
+    margin-left: 40px;
   }
 
 }

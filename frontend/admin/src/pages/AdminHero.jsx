@@ -5,7 +5,7 @@ import React, {
 
 import axios from "axios";
 import "../styles/hero.css";
-
+import Sidebar from "../components/Sidebar";
 const AdminHero = () => {
 
   // TEXT
@@ -48,7 +48,7 @@ const AdminHero = () => {
 
       const res =
         await axios.get(
-          "https://cms-3tty.onrender.com/api/hero"
+          "http://localhost:5000/api/hero"
         );
 
       if (res.data) {
@@ -105,7 +105,7 @@ const AdminHero = () => {
 
       await axios.put(
 
-        "https://cms-3tty.onrender.com/api/hero",
+        "http://localhost:5000/api/hero",
 
         {
 
@@ -143,6 +143,10 @@ const AdminHero = () => {
         padding: "40px",
       }}
     >
+      <Sidebar />
+       <div className="hero-admin-page">
+
+      <div className="hero-admin-card">
 
       <h1>
         Hero Section CMS
@@ -357,7 +361,9 @@ const AdminHero = () => {
       </button>
 
     </div>
+         </div>
 
+  </div>
   );
 
 };

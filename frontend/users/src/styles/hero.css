@@ -7,12 +7,12 @@
   min-height: 92vh;
 
   background: #657c61;
-
+  height: 100px;
   position: relative;
 
   overflow: hidden;
 
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .hero-image-box img {
   width: 100%;
@@ -325,7 +325,7 @@
 @media (max-width: 768px) {
 
   .hero {
-    min-height: auto;
+    min-height: 97vh;
 
     padding-top: 75px;
     padding-bottom: 35px;

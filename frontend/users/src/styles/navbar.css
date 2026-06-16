@@ -4,7 +4,7 @@
 
 .navbar{
 width:100%;
-height:76px;
+height:70px;
 
 background:#4f7044;
 
@@ -132,8 +132,8 @@ flex-shrink:0;
 ========================= */
 
 .nav-connect-btn{
-width:170px;
-height:56px;
+width:120px;
+height:40px;
 
 border:none;
 outline:none;
@@ -142,7 +142,7 @@ background:#e0c1bf;
 
 color:#1d1d1d;
 
-font-size:16px;
+font-size:12px;
 font-weight:700;
 
 border-radius:8px;
@@ -908,4 +908,116 @@ height:52px;
 font-size:16px;
 }
 
+}
+/* =========================================
+   MOBILE MENU LINKS
+========================================= */
+
+.mobile-nav-links{
+list-style:none;
+padding:0;
+margin:20px 0 0;
+width:100%;
+}
+
+.mobile-nav-links li{
+width:100%;
+border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+.mobile-nav-links li a{
+display:block;
+width:100%;
+padding:18px 0;
+font-size:18px;
+font-weight:600;
+color:#243524;
+transition:all .3s ease;
+}
+
+.mobile-nav-links li a:hover{
+color:#4f7044;
+padding-left:12px;
+}
+
+/* =========================================
+   MENU FIX
+========================================= */
+
+.mobile-menu{
+background:#fff !important;
+}
+
+.show-menu{
+right:0;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:600px){
+
+.mobile-menu{
+width:85%;
+}
+
+.mobile-nav-links li a{
+font-size:16px;
+padding:16px 0;
+}
+
+}
+
+@media(max-width:480px){
+
+.mobile-menu{
+width:100%;
+}
+
+}
+/* =========================================
+   FORCE MOBILE MENU LINKS
+========================================= */
+
+.mobile-nav-links{
+  list-style:none !important;
+  padding:0 !important;
+  margin:10px 0 0 !important;
+  width:100% !important;
+  display:block !important;
+}
+
+.mobile-nav-links li{
+  display:block !important;
+  width:100% !important;
+  border-bottom:1px solid #ddd !important;
+}
+
+.mobile-nav-links li a{
+  display:block !important;
+  width:100% !important;
+
+  padding:18px 0 !important;
+
+  color:#111 !important;
+
+  font-size:18px !important;
+  font-weight:700 !important;
+
+  text-decoration:none !important;
+}
+
+.mobile-nav-links li a:hover{
+  color:#4f7044 !important;
+}
+
+/* TEST */
+
+.mobile-nav-links{
+  background:#fff;
+}
+
+.mobile-nav-links li{
+  background:#fff;
 }

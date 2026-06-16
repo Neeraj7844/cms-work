@@ -129,17 +129,17 @@ await Neab.findOne();
 
 /* FILE FUNCTION */
 
+/* FILE FUNCTION */
+
 const getFile = (name) => {
 
 if (
-
-req.files &&
-req.files[name] &&
-req.files[name][0]
-
+  req.files &&
+  req.files[name] &&
+  req.files[name][0]
 ) {
 
-return `https://cms-3tty.onrender.com/uploads/${req.files[name][0].filename}`;
+return `/uploads/${req.files[name][0].filename}`;
 
 }
 

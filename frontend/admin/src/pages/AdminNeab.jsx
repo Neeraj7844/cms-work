@@ -8,7 +8,7 @@ import React, {
 } from "react";
 
 import axios from "axios";
-
+import Sidebar from "../components/Sidebar";
 import "../styles/adminNeab.css";
 
 const AdminNeab = () => {
@@ -51,7 +51,7 @@ const AdminNeab = () => {
       const res =
         await axios.get(
 
-          "https://cms-3tty.onrender.com/api/neab"
+          "http://localhost:5000/api/neab"
 
         );
 
@@ -120,7 +120,7 @@ const AdminNeab = () => {
 
         await axios.post(
 
-          "https://cms-3tty.onrender.com/api/neab",
+          "http://localhost:5000/api/neab",
 
           formData
 
@@ -138,31 +138,23 @@ const AdminNeab = () => {
 
   };
 
-  return (
+ return (
+  <div className="feature-admin-layout">
 
-    <div className="admin-neab">
+    <Sidebar />
 
-      {/* TITLE */}
+    <div className="admin-neab-page">
 
-      <h1 className="admin-neab-title">
+      <div className="admin-neab-container">
 
-        Admin Neab Section
+        <h1 className="admin-neab-title">
+          Admin Neab Section
+        </h1>
 
-      </h1>
+        <form onSubmit={handleSubmit}>
 
-      {/* FORM */}
-
-      <form onSubmit={handleSubmit}>
-
-        {/* TAG */}
-
-        <div>
-
-          <label>
-
-            Section Tag
-
-          </label>
+          {/* SECTION TAG */}
+          <label>Section Tag</label>
 
           <input
             type="text"
@@ -172,380 +164,212 @@ const AdminNeab = () => {
             onChange={handleChange}
           />
 
-        </div>
-
-        {/* HEADING */}
-
-        <div>
-
-          <label>
-
-            Main Heading
-
-          </label>
+          {/* MAIN HEADING */}
+          <label>Main Heading</label>
 
           <textarea
             name="heading"
             placeholder="Enter Main Heading"
             value={data.heading}
             onChange={handleChange}
-          ></textarea>
+          />
 
-        </div>
-
-        {/* HEADING SIZE */}
-
-        <div>
-
-          <label>
-
-            Heading Font Size
-
-          </label>
+          {/* HEADING FONT SIZE */}
+          <label>Heading Font Size</label>
 
           <input
             type="number"
             name="headingSize"
-            placeholder="Enter Heading Font Size"
+            placeholder="Heading Font Size"
             value={data.headingSize}
             onChange={handleChange}
           />
 
-        </div>
-
-        {/* PARAGRAPH */}
-
-        <div>
-
-          <label>
-
-            Paragraph
-
-          </label>
+          {/* PARAGRAPH */}
+          <label>Paragraph</label>
 
           <textarea
             name="paragraph"
             placeholder="Enter Paragraph"
             value={data.paragraph}
             onChange={handleChange}
-          ></textarea>
+          />
 
-        </div>
-
-        {/* PARAGRAPH SIZE */}
-
-        <div>
-
-          <label>
-
-            Paragraph Font Size
-
-          </label>
+          {/* PARAGRAPH FONT SIZE */}
+          <label>Paragraph Font Size</label>
 
           <input
             type="number"
             name="paragraphSize"
-            placeholder="Enter Paragraph Font Size"
+            placeholder="Paragraph Font Size"
             value={data.paragraphSize}
             onChange={handleChange}
           />
 
-        </div>
-
-        {/* IMAGE 1 */}
-
-        <div>
-
-          <label>
-
-            Upload Main Image 1
-
-          </label>
+          {/* IMAGE 1 */}
+          <label>Upload Main Image 1</label>
 
           <input
             type="file"
             onChange={(e) =>
-
               setFiles({
-
                 ...files,
-
-                image1:
-                e.target.files[0],
-
+                image1: e.target.files[0],
               })
-
             }
           />
 
-        </div>
-
-        {/* IMAGE 2 */}
-
-        <div>
-
-          <label>
-
-            Upload Main Image 2
-
-          </label>
+          {/* IMAGE 2 */}
+          <label>Upload Main Image 2</label>
 
           <input
             type="file"
             onChange={(e) =>
-
               setFiles({
-
                 ...files,
-
-                image2:
-                e.target.files[0],
-
+                image2: e.target.files[0],
               })
-
             }
           />
 
-        </div>
+          {/* CARD 1 */}
+          <div className="admin-card-box">
 
-        {/* CARD 1 */}
+            <h2 className="admin-section-title">
+              Card 1
+            </h2>
 
-        <div className="admin-card-box">
-
-          <h2 className="admin-section-title">
-
-            Card 1
-
-          </h2>
-
-          <div>
-
-            <label>
-
-              Card 1 Title
-
-            </label>
+            <label>Card 1 Title</label>
 
             <input
               type="text"
               name="card1Title"
-              placeholder="Enter Card 1 Title"
+              placeholder="Card 1 Title"
               value={data.card1Title}
               onChange={handleChange}
             />
 
-          </div>
-
-          <div>
-
-            <label>
-
-              Card 1 Icon
-
-            </label>
+            <label>Card 1 Icon</label>
 
             <input
               type="file"
               onChange={(e) =>
-
                 setFiles({
-
                   ...files,
-
-                  card1Icon:
-                  e.target.files[0],
-
+                  card1Icon: e.target.files[0],
                 })
-
               }
             />
 
           </div>
 
-        </div>
+          {/* CARD 2 */}
+          <div className="admin-card-box">
 
-        {/* CARD 2 */}
+            <h2 className="admin-section-title">
+              Card 2
+            </h2>
 
-        <div className="admin-card-box">
-
-          <h2 className="admin-section-title">
-
-            Card 2
-
-          </h2>
-
-          <div>
-
-            <label>
-
-              Card 2 Title
-
-            </label>
+            <label>Card 2 Title</label>
 
             <input
               type="text"
               name="card2Title"
-              placeholder="Enter Card 2 Title"
+              placeholder="Card 2 Title"
               value={data.card2Title}
               onChange={handleChange}
             />
 
-          </div>
-
-          <div>
-
-            <label>
-
-              Card 2 Icon
-
-            </label>
+            <label>Card 2 Icon</label>
 
             <input
               type="file"
               onChange={(e) =>
-
                 setFiles({
-
                   ...files,
-
-                  card2Icon:
-                  e.target.files[0],
-
+                  card2Icon: e.target.files[0],
                 })
-
               }
             />
 
           </div>
 
-        </div>
+          {/* CARD 3 */}
+          <div className="admin-card-box">
 
-        {/* CARD 3 */}
+            <h2 className="admin-section-title">
+              Card 3
+            </h2>
 
-        <div className="admin-card-box">
-
-          <h2 className="admin-section-title">
-
-            Card 3
-
-          </h2>
-
-          <div>
-
-            <label>
-
-              Card 3 Title
-
-            </label>
+            <label>Card 3 Title</label>
 
             <input
               type="text"
               name="card3Title"
-              placeholder="Enter Card 3 Title"
+              placeholder="Card 3 Title"
               value={data.card3Title}
               onChange={handleChange}
             />
 
-          </div>
-
-          <div>
-
-            <label>
-
-              Card 3 Icon
-
-            </label>
+            <label>Card 3 Icon</label>
 
             <input
               type="file"
               onChange={(e) =>
-
                 setFiles({
-
                   ...files,
-
-                  card3Icon:
-                  e.target.files[0],
-
+                  card3Icon: e.target.files[0],
                 })
-
               }
             />
 
           </div>
 
-        </div>
+          {/* CARD 4 */}
+          <div className="admin-card-box">
 
-        {/* CARD 4 */}
+            <h2 className="admin-section-title">
+              Card 4
+            </h2>
 
-        <div className="admin-card-box">
-
-          <h2 className="admin-section-title">
-
-            Card 4
-
-          </h2>
-
-          <div>
-
-            <label>
-
-              Card 4 Title
-
-            </label>
+            <label>Card 4 Title</label>
 
             <input
               type="text"
               name="card4Title"
-              placeholder="Enter Card 4 Title"
+              placeholder="Card 4 Title"
               value={data.card4Title}
               onChange={handleChange}
             />
 
-          </div>
-
-          <div>
-
-            <label>
-
-              Card 4 Icon
-
-            </label>
+            <label>Card 4 Icon</label>
 
             <input
               type="file"
               onChange={(e) =>
-
                 setFiles({
-
                   ...files,
-
-                  card4Icon:
-                  e.target.files[0],
-
+                  card4Icon: e.target.files[0],
                 })
-
               }
             />
 
           </div>
 
-        </div>
+          {/* SUBMIT BUTTON */}
 
-        {/* BUTTON */}
+          <button type="submit">
+            Save Section
+          </button>
 
-        <button type="submit">
+        </form>
 
-          Save Section
-
-        </button>
-
-      </form>
+      </div>
 
     </div>
 
-  );
-
+  </div>
+);
 };
 
 export default AdminNeab;

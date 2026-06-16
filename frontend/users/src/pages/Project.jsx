@@ -28,7 +28,7 @@ const fetchProject=async()=>{
 try{
 
 const res=await axios.get(
-"https://cms-3tty.onrender.com/api/project"
+"http://localhost:5000/api/project"
 );
 
 if(res.data){

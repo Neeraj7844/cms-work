@@ -8,7 +8,11 @@
   box-sizing:border-box;
 }
 
+html,
 body{
+  width:100%;
+  overflow-x:hidden;
+
   font-family:"Poppins",sans-serif;
 
   background:
@@ -17,14 +21,20 @@ body{
     #f8fafc 0%,
     #eef2ff 100%
   );
+}
 
-  overflow-x:hidden;
+/* LAYOUT */
+
+.feature-admin-layout{
+  display:flex;
 }
 
 /* PAGE */
 
 .progress-admin-page{
-  width:100%;
+  flex:1;
+
+  margin-left:290px;
 
   min-height:100vh;
 
@@ -88,7 +98,17 @@ body{
   );
 }
 
-/* LABELS */
+/* HEADINGS */
+
+.progress-admin-container h2{
+  font-size:24px;
+
+  font-weight:700;
+
+  color:#0f172a;
+
+  margin-bottom:18px;
+}
 
 .progress-admin-container h3,
 .progress-admin-container h4{
@@ -106,7 +126,8 @@ body{
 /* INPUTS */
 
 .progress-admin-container input,
-.progress-admin-container textarea{
+.progress-admin-container textarea,
+.progress-admin-container select{
   width:100%;
 
   background:#f8fafc;
@@ -140,7 +161,8 @@ body{
 /* FOCUS */
 
 .progress-admin-container input:focus,
-.progress-admin-container textarea:focus{
+.progress-admin-container textarea:focus,
+.progress-admin-container select:focus{
   background:#ffffff;
 
   border-color:#3b82f6;
@@ -159,7 +181,7 @@ body{
   cursor:pointer;
 }
 
-/* HR */
+/* DIVIDER */
 
 .progress-admin-container hr{
   border:none;
@@ -191,8 +213,6 @@ body{
   transition:0.3s ease;
 }
 
-/* CARD HOVER */
-
 .progress-admin-card:hover{
   transform:translateY(-4px);
 
@@ -203,7 +223,7 @@ body{
 /* CARD TITLE */
 
 .progress-admin-card h2{
-  font-size:26px;
+  font-size:24px;
 
   font-weight:700;
 
@@ -212,7 +232,19 @@ body{
   margin-bottom:20px;
 }
 
-/* BUTTONS */
+/* BUTTON WRAPPER */
+
+.progress-admin-buttons{
+  display:flex;
+
+  gap:15px;
+
+  flex-wrap:wrap;
+
+  margin-top:25px;
+}
+
+/* BUTTON */
 
 .progress-admin-container button{
   border:none;
@@ -237,11 +269,7 @@ body{
   cursor:pointer;
 
   transition:0.3s ease;
-
-  margin-top:18px;
 }
-
-/* BUTTON HOVER */
 
 .progress-admin-container button:hover{
   transform:translateY(-3px);
@@ -266,29 +294,32 @@ body{
   0 18px 35px rgba(239,68,68,0.25);
 }
 
-/* BUTTON WRAPPER */
+/* TABLET */
 
-.progress-admin-buttons{
-  display:flex;
+@media(max-width:992px){
 
-  gap:20px;
+  .progress-admin-page{
+    padding:25px;
+  }
 
-  flex-wrap:wrap;
-
-  margin-top:30px;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:768px){
 
+  .feature-admin-layout{
+    display:block;
+  }
+
   .progress-admin-page{
-    padding:20px;
+    margin-left:0;
+    width:100%;
+    padding:15px;
   }
 
   .progress-admin-container{
-    padding:24px;
-
+    padding:22px;
     border-radius:24px;
   }
 

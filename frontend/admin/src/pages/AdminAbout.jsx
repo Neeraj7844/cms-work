@@ -6,7 +6,7 @@ useState,
 import axios from "axios";
 
 import "../styles/AdminAbout.css";
-
+import Sidebar from "../components/Sidebar";
 const AdminAbout=()=>{
 
 const [data,setData]=useState({
@@ -154,7 +154,7 @@ missionImageFile
 
 await axios.put(
 
-"https://cms-3tty.onrender.com/api/api/about",
+"http://localhost:5000/api/about",
 
 formData,
 
@@ -182,9 +182,9 @@ alert("Server Error");
 };
 
 return(
-
+ <div className="admin-layout">
 <div className="admin-about">
-
+     <Sidebar />
 <h1 className="admin-page-title">
 
 About CMS
@@ -630,7 +630,7 @@ Update About
 </button>
 
 </div>
-
+</div>
 );
 
 };

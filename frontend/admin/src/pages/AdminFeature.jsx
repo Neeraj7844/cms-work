@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState,
 } from "react";
-
+import Sidebar from "../components/Sidebar";
 import axios from "axios";
 import "../styles/features.css";
 
@@ -52,7 +52,7 @@ const AdminFeature = () => {
 
         const res =
           await axios.get(
-            "https://cms-3tty.onrender.com/api/feature"
+            "http://localhost:5000/api/feature"
           );
 
         if (res.data) {
@@ -184,7 +184,7 @@ const AdminFeature = () => {
 
         await axios.put(
 
-          "https://cms-3tty.onrender.com/api/feature",
+          "http://localhost:5000/api/feature",
 
           {
 
@@ -220,7 +220,7 @@ const AdminFeature = () => {
   return (
 
 <div className="feature-admin">
-
+    <Sidebar />
   <div className="feature-admin-card">
 
     <h1 className="feature-title">

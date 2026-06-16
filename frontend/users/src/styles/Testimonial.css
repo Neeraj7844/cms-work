@@ -39,16 +39,16 @@
 }
 
 .testimonial-top h1 {
-  font-size: 55px;
+  font-size:45px;
   color: #5c7658;
-
+  line-height: 1;
   font-weight: 800;
 
   margin-bottom: 18px;
 }
 
 .testimonial-top p {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.7;
   color: #222;
 }

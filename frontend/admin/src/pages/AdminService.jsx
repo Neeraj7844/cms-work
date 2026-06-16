@@ -4,7 +4,7 @@ import React, {
 } from "react";
 
 import axios from "axios";
-
+import Sidebar from "../components/Sidebar";
 import "../styles/service.css";
 
 const AdminService = () => {
@@ -36,7 +36,7 @@ const AdminService = () => {
       const res =
         await axios.get(
 
-          "https://cms-3tty.onrender.com/api/service"
+          "http://localhost:5000/api/service"
 
         );
 
@@ -167,7 +167,7 @@ const AdminService = () => {
 
       await axios.put(
 
-        "https://cms-3tty.onrender.com/api/service",
+        "http://localhost:5000/api/service",
 
         data
 
@@ -182,7 +182,7 @@ const AdminService = () => {
   return (
 
     <div className="service-admin-page">
-
+      <Sidebar />
       <div className="service-admin-container">
 
         <h1>

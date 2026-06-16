@@ -458,11 +458,11 @@ gap:35px;
 @media(max-width:768px){
 
 .bg-text{
-font-size:70px;
+font-size:60px;
 }
 
 .project-content h2{
-font-size:35px;
+font-size:30px;
 text-align:center;
 }
 
@@ -491,6 +491,7 @@ height:260px;
 }
 
 .brands-section{
+margin-bottom: 20px;
 padding:60px 20px;
 }
 
@@ -508,7 +509,7 @@ height:20px;
 }
 
 .brands-heading h2{
-font-size:26px;
+font-size:23px;
 max-width:100%;
 }
 

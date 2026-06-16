@@ -16,7 +16,7 @@ const Journey = () => {
 
       <h1>
         We Have Leadership Strong
-        <br />
+        
         Experience In Business
       </h1>
 

@@ -31,7 +31,7 @@ const Hero = () => {
         const res =
           await axios.get(
 
-            "https://cms-3tty.onrender.com/api/hero"
+            "http://localhost:5000/api/hero"
 
           );
 

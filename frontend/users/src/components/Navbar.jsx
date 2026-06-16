@@ -194,7 +194,12 @@ const Navbar = () => {
         </div>
 
       </nav>
-
+{menuOpen && (
+  <div
+    className="mobile-overlay show-overlay"
+    onClick={() => setMenuOpen(false)}
+  />
+)}
       {/* MOBILE MENU */}
 <div className={`mobile-menu ${menuOpen ? "show-menu" : ""}`}>
 
@@ -221,7 +226,7 @@ const Navbar = () => {
 
   {/* MENU */}
 
-  <ul>
+  <ul className="mobile-nav-links">
 
     <li>
 

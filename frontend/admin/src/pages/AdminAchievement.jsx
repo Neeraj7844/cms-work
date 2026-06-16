@@ -4,7 +4,7 @@ import React, {
 } from "react";
 
 import axios from "axios";
-
+import Sidebar from "../components/Sidebar";
 import "../styles/achievement.css";
 
 const AdminAchievement = () => {
@@ -35,7 +35,7 @@ const AdminAchievement = () => {
 
         const res =
           await axios.get(
-            "https://cms-3tty.onrender.com/api/achievement"
+            "http://localhost:5000/api/achievement"
           );
 
         if (res.data) {
@@ -171,7 +171,7 @@ const AdminAchievement = () => {
 
         await axios.put(
 
-             "https://cms-3tty.onrender.com/api/api/achievement",
+             "http://localhost:5000/api/achievement",
 
           data
 
@@ -192,7 +192,7 @@ const AdminAchievement = () => {
   return (
 
     <div className="admin-achievement-page">
-
+          <Sidebar />
       <div className="admin-achievement-container">
 
         <h1>

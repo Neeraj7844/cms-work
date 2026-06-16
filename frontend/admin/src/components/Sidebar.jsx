@@ -1,5 +1,4 @@
 import React from "react";
-
 import "../styles/sidebar.css";
 
 import {
@@ -11,16 +10,9 @@ const Sidebar = () => {
 
   const navigate = useNavigate();
 
-  // LOGOUT FUNCTION
-
   const handleLogout = () => {
 
-    // TOKEN REMOVE
-
     localStorage.removeItem("token");
-
-    // LOGIN PAGE REDIRECT
-
     navigate("/login");
 
   };
@@ -29,19 +21,16 @@ const Sidebar = () => {
 
     <div className="sidebar">
 
-      {/* LOGO */}
-
       <div className="sidebar-logo">
         <h2>
-          Admin <br /> CMS
+          Admin <br />
+          CMS
         </h2>
       </div>
 
-      {/* MENU */}
-
       <ul className="sidebar-menu">
 
-        <li className="active">
+        <li>
           <Link to="/">
             Dashboard
           </Link>
@@ -58,11 +47,13 @@ const Sidebar = () => {
             Features CMS
           </Link>
         </li>
+
         <li>
           <Link to="/admin/neab">
             Neab Section
           </Link>
         </li>
+
         <li>
           <Link to="/achievement">
             Achievement CMS
@@ -105,8 +96,6 @@ const Sidebar = () => {
           </Link>
         </li>
 
-        {/* LOGOUT */}
-
         <button
           className="logout-btn"
           onClick={handleLogout}
@@ -119,6 +108,7 @@ const Sidebar = () => {
     </div>
 
   );
+
 };
 
 export default Sidebar;
