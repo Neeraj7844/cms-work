@@ -32,7 +32,7 @@ const AchievementSection = () => {
 
         const res =
           await axios.get(
-            "http://localhost:5000/api/achievement"
+            "https://cms-work.onrender.com/api/achievement"
           );
 
         if (res.data) {

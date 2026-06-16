@@ -31,7 +31,7 @@ const Hero = () => {
         const res =
           await axios.get(
 
-            "http://localhost:5000/api/hero"
+            "https://cms-work.onrender.com/api/hero"
 
           );
 

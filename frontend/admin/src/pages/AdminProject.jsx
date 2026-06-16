@@ -22,7 +22,7 @@ const fetchProject=async()=>{
 try{
 
 const res=await axios.get(
-"http://localhost:5000/api/project"
+"https://cms-work.onrender.com/api/project"
 );
 
 if(res.data){
@@ -101,7 +101,7 @@ const updateProject=async()=>{
 try{
 
 await axios.put(
-"http://localhost:5000/api/project",
+"https://cms-work.onrender.com/api/project",
 data
 );
 

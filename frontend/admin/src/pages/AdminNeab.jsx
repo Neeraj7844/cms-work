@@ -51,7 +51,7 @@ const AdminNeab = () => {
       const res =
         await axios.get(
 
-          "http://localhost:5000/api/neab"
+          "https://cms-work.onrender.com/api/neab"
 
         );
 
@@ -120,7 +120,7 @@ const AdminNeab = () => {
 
         await axios.post(
 
-          "http://localhost:5000/api/neab",
+          "https://cms-work.onrender.com/api/neab",
 
           formData
 

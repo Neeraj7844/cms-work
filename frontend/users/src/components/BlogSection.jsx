@@ -31,7 +31,7 @@ try{
 
 const res=
 await axios.get(
-"http://localhost:5000/api/blog"
+"https://cms-work.onrender.com/api/blog"
 );
 
 if(res.data){

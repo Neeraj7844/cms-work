@@ -27,7 +27,7 @@ try{
 
 const res=
 await axios.get(
-"http://localhost:5000/api/about"
+"https://cms-work.onrender.com/api/about"
 );
 
 if(res.data){

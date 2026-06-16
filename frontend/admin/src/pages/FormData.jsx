@@ -13,7 +13,7 @@ const FormData = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/form/all"
+        "https://cms-work.onrender.com/api/form/all"
       );
 
       setForms(res.data.forms);

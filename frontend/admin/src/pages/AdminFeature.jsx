@@ -52,7 +52,7 @@ const AdminFeature = () => {
 
         const res =
           await axios.get(
-            "http://localhost:5000/api/feature"
+            "https://cms-work.onrender.com/api/feature"
           );
 
         if (res.data) {
@@ -184,7 +184,7 @@ const AdminFeature = () => {
 
         await axios.put(
 
-          "http://localhost:5000/api/feature",
+          "https://cms-work.onrender.com/api/feature",
 
           {
 

@@ -54,7 +54,7 @@ const fetchProgress=async()=>{
 try{
 
 const res=await axios.get(
-"http://localhost:5000/api/progress"
+"https://cms-work.onrender.com/api/progress"
 );
 
 if(res.data){

@@ -39,7 +39,7 @@ const ServicesSection = () => {
         const res =
           await axios.get(
 
-            "http://localhost:5000/api/service"
+            "https://cms-work.onrender.com/api/service"
 
           );
 

@@ -154,7 +154,7 @@ missionImageFile
 
 await axios.put(
 
-"http://localhost:5000/api/about",
+"https://cms-work.onrender.com/api/about",
 
 formData,
 
