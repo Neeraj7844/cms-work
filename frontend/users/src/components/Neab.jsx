@@ -12,7 +12,7 @@ import {
 import "../styles/neab.css";
 
 const API =
-  "http://localhost:5000";
+  "https://cms-work.onrender.com";
 
 const Neab = () => {
 
